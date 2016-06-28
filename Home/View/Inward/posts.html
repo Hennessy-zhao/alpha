@@ -6,6 +6,7 @@
 <link href="__PUBLIC__/Inward/css/post.css" rel="stylesheet" type="text/css" />
 <link href="__PUBLIC__/Inward/css/timeblogstyle.css" rel="stylesheet">
 <link href="__PUBLIC__/Inward/css/animation.css" rel="stylesheet">
+<link href="__PUBLIC__/css/bootstrap.min.css" rel="stylesheet">
 <script type="text/javascript" src="__PUBLIC__/Inward/js/jquery.js"></script>
 <script type="text/javascript" src="__PUBLIC__/Inward/js/js.js"></script>
 
@@ -183,7 +184,18 @@
         <!--mainbody结束-->
 
         <!--时间轴结束-->
-		
+		<div id="newpost">
+            <div class="form-group">
+                <span class="posttitle">标题</span><input type="text" class="form-control" id="name" 
+                 placeholder="请输入新帖标题" style="width:80%;background-color:whitesmoke;">
+            </div>
+            <br>
+            <div class="form-group">
+                <textarea class="form-control" rows="3" style="width:90%;background-color:whitesmoke;"></textarea>
+            </div>   
+            <br>
+            <button class="btn btn-success" style="padding-left:20px;padding-right:20px;">发&nbsp;&nbsp;帖</button> 
+        </div>
 		
    
 		<div id="templatemo_footer">

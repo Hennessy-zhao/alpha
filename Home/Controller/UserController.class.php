@@ -6,6 +6,10 @@ class UserController extends Controller {
      	$this->display("user");
      }
 
+     public function _empty(){
+     	echo "您输入的网址有错";
+     }
+
 
 
 }

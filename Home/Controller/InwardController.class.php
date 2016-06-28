@@ -23,4 +23,8 @@ class InwardController extends Controller {
      	$this->display("membercenter");
      }
 
+     public function _empty(){
+          echo "您输入的网址有错";
+     }
+
 }
