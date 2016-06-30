@@ -74,4 +74,8 @@ class IndexController extends Controller {
 			}
 		}
     }
+
+    public function _empty(){
+     	echo "您输入的网址有错";
+     }
 }

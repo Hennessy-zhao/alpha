@@ -185,6 +185,10 @@ class ManageController extends Controller {
         $this->display("inwardadvise");
     }
 
+    public function _empty(){
+        echo "您输入的网址有错";
+     }
+
 
     
 }

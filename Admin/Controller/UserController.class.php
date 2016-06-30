@@ -66,10 +66,9 @@ class UserController extends Controller {
 		{
 			echo 0;
 		}
-    	
-
-
-
-
     }
+
+    public function _empty(){
+     	echo "您输入的网址有错";
+     }
 }
