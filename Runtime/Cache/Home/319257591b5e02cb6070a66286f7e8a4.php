@@ -3,9 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>文件共享中心</title>
-<link href="/alpha/Public/Inward/css/files.css" rel="stylesheet" type="text/css" />
-<link href="/alpha/Public/css/bootstrap.min.css" rel="stylesheet">
-
+<link href="/alpha/Public/Outward/Inward/css/files.css" rel="stylesheet" />
+<link href="/alpha/Public/Common/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
 <body>
@@ -40,7 +39,7 @@
         
         <div id="templatemo_content_wrapper">
 			<div id="content">
-            	<h4><img src="/alpha/Public/Inward/images/chat/templatemo_list.png" >&nbsp;&nbsp;文件列表
+            	<h4><img src="/alpha/Public/Outward/Inward/images/templatemo_list.png" >&nbsp;&nbsp;文件列表
                 <div class="btn_more" data-toggle="modal" data-target="#myModal">上传新文件</div>
                 </h4>
                 <!-- 模态框（Modal） -->
@@ -75,7 +74,7 @@
                 <div class="boxes">
                     <div class="grid_4">
                         <figure>
-                            <div><img src="/alpha/Public/Inward/images/chat/slider/templatemo_slide03.jpg" alt=""></div>
+                            <div><img src="/alpha/Public/Outward/Inward/images/templatemo_slide03.jpg" alt=""></div>
                              <figcaption>  
                                         <p class="p1">传智播客PHP从入门到精通，非常好的学习PHP的内容视频教程。</p>  
                                         <p class="p2">上传者：赵益石</p>  
@@ -102,8 +101,8 @@
 	</div> <!-- end of wrapper -->
 </div> <!-- end of wrapper_outer -->
 
-    <script src="/alpha/Public/js/jquery-1.10.2.min.js"></script>
-    <script src="/alpha/Public/js/bootstrap.min.js"></script>
+    <script src="/alpha/Public/Common/js/jquery-2.1.4.min.js"></script>
+    <script src="/alpha/Public/Common/js/bootstrap.min.js"></script>
 
 </body>
 </html>

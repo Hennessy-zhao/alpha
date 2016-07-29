@@ -5,20 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>计算机系统研发中心欢迎您</title>
-<link rel="stylesheet" href="/alpha/Public/css/Index/style.css" />
+<link rel="stylesheet" href="/alpha/Public/Outward/welcome/css/style.css" />
 
 </head>
 <body>
 <a href="<?php echo U('Home/Main/index','','');?>" id="a1" style="float:right;margin-top:10px;color:white;">跳过动画</a>
-<!-- <div id="click">
-  请点击
-  <br/>
- <img src="/alpha/Public/images/Index/click.jpg" width="7%">
-</div> -->
 <main>
   <div class="label" style="position:absolute;top:45%;">
     <a href="#" class=" js-trigger-reset" style="display:none;">
-      <center><img src="/alpha/Public/images/Index/title.jpg"></center>
+      <center><img src="/alpha/Public/Outward/main/images/title.jpg"></center>
     </a>
   </div>
   <div class="-content -index">
@@ -54,11 +49,10 @@
   </div>
 </main>
 
-<script src="/alpha/Public/js/Index/jquery-2.1.1.min.js" type="text/javascript"></script>
-<script src='/alpha/Public/js/Index/TweenMax.min.js'></script>
-<script src="/alpha/Public/js/bootstrap.js" ></script>
-<script src="/alpha/Public/js/Index/index.js"></script>
-<script type="text/javascript">
-</script>
+<script src="/alpha/Public/Common/js/jquery-2.1.4.min.js" type="text/javascript"></script>
+<script src='/alpha/Public/Outward/welcome/js/TweenMax.min.js'></script>
+<script src="/alpha/Public/Common/js//bootstrap.js" ></script>
+<script src="/alpha/Public/Outward/welcome/js/index.js"></script>
+
 </body>
 </html>

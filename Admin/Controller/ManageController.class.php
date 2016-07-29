@@ -18,6 +18,15 @@ class ManageController extends Controller {
     }
 
 
+
+//welcome欢迎页面
+
+    public function welcome(){
+        $this->display("welcome");
+     }
+
+
+
 //已有成员的一系列操作*****************************
 
     public function existmemer(){

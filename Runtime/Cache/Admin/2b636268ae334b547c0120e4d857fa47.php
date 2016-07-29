@@ -29,7 +29,7 @@
             </form>
         </div>
     </div>
-    <script src="/alpha/Public/js/jquery-1.10.2.min.js"></script>
+    <script src="/alpha/Public/Common/js/jquery-2.1.4.min.js"></script>
     <script type="text/javascript">
         $(function(){
             $("#form1").submit(function(){

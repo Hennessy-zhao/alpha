@@ -5,9 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">  
 <title>Visual Admin Dashboard - Home</title>
-<link href="/alpha/Public/User/css/font-awesome.min.css" rel="stylesheet">
-<link href="/alpha/Public/User/css/bootstrap.min.css" rel="stylesheet">
-<link href="/alpha/Public/User/css/templatemo-style.css" rel="stylesheet">
+<link href="/alpha/Public/Outward/user/css/font-awesome.min.css" rel="stylesheet">
+<link href="/alpha/Public/Common/css/bootstrap.min.css" rel="stylesheet">
+<link href="/alpha/Public/Outward/user/css/templatemo-style.css" rel="stylesheet">
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -25,7 +25,7 @@
           <h1>Personal center </h1>
         </header>
         <div class="profile-photo-container">
-          <img src="/alpha/Public/User/images/profile-photo.jpg" alt="Profile Photo" class="img-responsive">  
+          <img src="/alpha/Public/Outward/user/images/profile-photo.jpg" alt="Profile Photo" class="img-responsive">  
           <div class="profile-photo-overlay"></div>
         </div>      
         <!-- Search box -->
@@ -68,7 +68,7 @@
     </div>
     
     <!-- JS -->
-    <script src="/alpha/Public/User/js/jquery-1.11.2.min.js"></script>      <!-- jQuery -->
+    <script src="/alpha/Public/Common/js/jquery-2.1.4.min.js"></script>      <!-- jQuery -->
    
 
   </body>

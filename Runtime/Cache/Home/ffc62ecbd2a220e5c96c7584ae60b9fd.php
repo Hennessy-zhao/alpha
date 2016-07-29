@@ -3,8 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>在线聊天室</title>
-<link href="/alpha/Public/Inward/css/templatemo_style.css" rel="stylesheet" type="text/css" />
-<link href="/alpha/Public/Inward/css/jquery.ennui.contentslider.css" rel="stylesheet" type="text/css" media="screen,projection" />
+<link href="/alpha/Public/Outward/Inward/css/templatemo_style.css" rel="stylesheet" type="text/css" />
+<link href="/alpha/Public/Outward/Inward/css/jquery.ennui.contentslider.css" rel="stylesheet" media="screen,projection" />
 
 </head>
 <body>
@@ -47,7 +47,7 @@
                             	<div class="slider_content_wrapper">
 									
 									<div class="slider_image">
-										<img src="/alpha/Public/Inward/images/chat/slider/templatemo_slide01.jpg" alt="Mauris quis eros arcu" />
+										<img src="/alpha/Public/Outward/Inward/images/templatemo_slide01.jpg" alt="Mauris quis eros arcu" />
 									</div>
 									
 									<div class="slider_content">
@@ -64,7 +64,7 @@
                             	<div class="slider_content_wrapper">
 									
 									<div class="slider_image">
-										<img src="/alpha/Public/Inward/images/chat/slider/templatemo_slide02.jpg" alt="Cras porta porta turpis" />
+										<img src="/alpha/Public/Outward/Inward/images/templatemo_slide02.jpg" alt="Cras porta porta turpis" />
 									</div>
                      			
 									<div class="slider_content">
@@ -81,7 +81,7 @@
                             	<div class="slider_content_wrapper">
 									
 									<div class="slider_image">
-										<img src="/alpha/Public/Inward/images/chat/slider/templatemo_slide03.jpg" alt="Nullam ac mi id massa consectetur" />
+										<img src="/alpha/Public/Outward/Inward/images/templatemo_slide03.jpg" alt="Nullam ac mi id massa consectetur" />
 									</div>
 									
 									<div class="slider_content">
@@ -98,7 +98,7 @@
                             	<div class="slider_content_wrapper">
 									
 									<div class="slider_image">
-										<img src="/alpha/Public/Inward/images/chat/slider/templatemo_slide04.jpg" alt="Maecenas venenatis viverra nisi" />
+										<img src="/alpha/Public/Outward/Inward/images/templatemo_slide04.jpg" alt="Maecenas venenatis viverra nisi" />
 									</div>
 									
 									<div class="slider_content">
@@ -115,20 +115,7 @@
                     </div><!-- End cs_wrapper -->
                 </div><!-- End contentslider -->
                 
-                <!-- Site JavaScript -->
-                <script type="text/javascript" src="/alpha/Public/Inward/js/jquery-2.1.4.min.js"></script>
-                <script type="text/javascript" src="/alpha/Public/Inward/js/jquery.easing.1.3.js"></script>
-                <script type="text/javascript" src="/alpha/Public/Inward/js/jquery.ennui.contentslider.js"></script>
-                <script type="text/javascript">
-                    $(function() {
-                    $('#one').ContentSlider({
-                    width : '940px',
-                    height : '240px',
-                    speed : 400,
-                    easing : 'easeOutSine'
-                    });
-                    });
-                </script>
+             
                 <div class="cleaner"></div>
             	
             </div>
@@ -157,6 +144,19 @@
 </div> <!-- end of wrapper_outer -->
 
 
-
+   <!-- Site JavaScript -->
+    <script src="/alpha/Public/Common/js/jquery-2.1.4.min.js" ></script>
+    <script src="/alpha/Public/Outward/Inward/js/jquery.easing.1.3.js"></script>
+    <script src="/alpha/Public/Outward/Inward/js/jquery.ennui.contentslider.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('#one').ContentSlider({
+                width : '940px',
+                height : '240px',
+                speed : 400,
+                easing : 'easeOutSine'
+            });
+        });
+    </script>
 </body>
 </html>

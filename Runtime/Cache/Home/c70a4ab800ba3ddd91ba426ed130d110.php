@@ -3,10 +3,10 @@
 <head>
 	<title></title>
 	<meta charset="UTF-8">
-	<script src="/alpha/Public/js/jquery-2.1.4.min.js" ></script>
-	<link rel="stylesheet" type="text/css" href="/alpha/Public/Inward/css/index.css">
-	<script src="/alpha/Public/js/bootstrap.js" ></script>
-	<link href="/alpha/Public/css/bootstrap.min.css" rel="stylesheet">
+	<script src="/alpha/Public/Common/js/jquery-2.1.4.min.js" ></script>
+	<link href="/alpha/Public/Outward/Inward/css/index.css" rel="stylesheet" >
+	<link href="/alpha/Public/Common/css/bootstrap.min.css" rel="stylesheet">
+	<script src="/alpha/Public/Common/js/bootstrap.js" ></script>
 
 </head>
 <body>

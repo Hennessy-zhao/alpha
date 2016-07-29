@@ -3,11 +3,11 @@
 <head>
 	<title></title>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-	<script src="/alpha/Public/js/jquery-2.1.4.min.js" ></script>
-	<link  rel="stylesheet" href="/alpha/Public/css/bootstrap.min.css"/>
-	<script src="/alpha/Public/js/bootstrap.js" ></script>
-	<link rel="stylesheet" type="text/css" href="/alpha/Public/Admin/Manage/css/examinemember.css">
-	<link rel="stylesheet" type="text/css" href="/alpha/Public/Admin/Login/css/icons/icons.css" media="screen" />
+	<script src="/alpha/Public/Common/js/jquery-2.1.4.min.js"></script>
+	<link href="/alpha/Public/Common/css/bootstrap.min.css" rel="stylesheet"/>
+	<script src="/alpha/Public/Common/js/bootstrap.js" ></script>
+	<link href="/alpha/Public/Admin/Manage/css/examinemember.css" rel="stylesheet">
+	<link href="/alpha/Public/Admin/Login/css/icons/icons.css" rel="stylesheet" media="screen" />
 	<style>
 		li{
 			font-size: 1.1em;
@@ -17,6 +17,10 @@
 </head>
 <body>
 	<div class="row" style="padding-left:20px;padding-right:20px;">
+		<br>
+		<div class="col-md-12">
+			<p>管理员您好，欢迎进入江苏师范大学智慧与教育学院社团计算机系统研发中心后台管理系统，请操作。。。</p>
+		</div>
 		<div class="col-md-12" id="topnumber">
 			<div class="col-md-3" id="top-1">
 				<div class="row">
