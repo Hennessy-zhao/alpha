@@ -11,6 +11,23 @@
 </head>
 <body>
 	<div class="row">
+		<div class="col-md-12">
+			<div class="dropdown">
+			   <p class="btn dropdown-toggle" id="dropdownMenu1" 
+			      data-toggle="dropdown">
+			      {$_SESSION['user']}
+			      <span class="caret"></span>
+			   </p>
+			   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+			      <li role="presentation">
+			         <a role="menuitem" tabindex="-1" href="{:U('Home/User/index','','')}">个人中心</a>
+			      </li>
+			      <li role="presentation">
+			         <a id="signout" role="menuitem" tabindex="-1" href="#">退出</a>
+			      </li>
+			   </ul>
+			</div>
+		</div>
 		<div class="col-md-10 col-md-offset-1" id="contain">
 			<div class="row">
 				<div class="col-md-4" id="left">
@@ -51,5 +68,27 @@
 			</div>
 		</div>
 	</div>
+
+
+
+	<script>
+		$(function(){
+            $("#signout").click(function(){
+                if (confirm("确定退出管理界面？？")) {
+                     $.post("{:U('Home/Inward/signout','','')}",{
+                          
+                      },function(data){
+                        if (data==1) {
+                            window.location.href="{:U('Home/Main/index','','')}";
+                        }
+                        else{
+                            alert("服务器正忙");
+                        }
+                    })
+                };
+                return false;
+            })
+        })
+	</script>
 </body>
 </html>

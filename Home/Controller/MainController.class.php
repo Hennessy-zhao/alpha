@@ -21,6 +21,7 @@ class MainController extends Controller {
 			else{
 				if ($password==md5($pasd)){
 					echo 1;
+					$_SESSION['user']=$res[0]['username'];
 				}
 				else
 					echo 2;
@@ -38,6 +39,7 @@ class MainController extends Controller {
 				else{
 					if ($password1==md5($pasd)) {
 						echo 1;
+						$_SESSION['user']=$res1[0]['username'];
 					}
 					else{
 						echo 2;
@@ -56,6 +58,7 @@ class MainController extends Controller {
 					else{
 						if ($password2==md5($pasd)) {
 							echo 1;
+							$_SESSION['user']=$res2[0]['username'];
 						}
 						else{
 							echo 2;

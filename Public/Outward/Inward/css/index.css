@@ -9,8 +9,18 @@ body{
 
 
 #contain{
-	margin-top: 80px;
+	margin-top: 60px;
 }
+
+	.dropdown{
+		float: right;
+		margin-right: 2%;
+	}
+
+	#dropdownMenu1{
+		color: white;
+		font-size: 1.2em;
+	}
 
 #left{
 }

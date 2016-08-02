@@ -269,7 +269,7 @@
         });
       });
       </script>
-      <script src="/alpha/Public/js/stickUp.min.js" type="text/javascript"></script>
+      <script src="/alpha/Public/Outward/main/js/stickUp.min.js" type="text/javascript"></script>
       <script type="text/javascript">
         //initiating jQuery
         jQuery(function($) {

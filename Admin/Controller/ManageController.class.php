@@ -131,6 +131,77 @@ class ManageController extends Controller {
 
 
 
+
+//现有文件的一系列操作*****************************
+
+    public function existfiles(){
+        $m = M('files');      
+        $where = "ifshow!=0";
+        $count = $m->where($where)->count();
+        // 实例化分页类
+        $p = new Page($count,10);
+        //$p = getpage($count,15);
+        $list = $m->field(true)->where($where)->order('id asc')->limit($p->firstRow, $p->listRows)->select();
+        $this->assign('select', $list); // 赋值数据集
+        $this->assign('page', $p->show()); // 赋值分页输出
+        $this->assign('count', $count); // 赋值数据集
+
+
+        $this->display("existfiles");
+    }
+
+    //文件审核操作
+
+        public function managefiles(){
+            $fileid=I('post.fileid');
+            $manage=I('post.manage');
+
+            if ($manage==0) {
+                $User = M("files"); // 实例化User对象
+                $where2['id']=$fileid;
+                $res=$User->where($where2)->delete(); 
+                if ($res) {
+                    echo 1;
+                }
+                else
+                    echo 0;
+            }
+            else{
+                 $User1 = M("files"); // 实例化User对象
+                        // 要修改的数据对象属性赋值
+                        $data1['ifshow'] = 1;
+                        $data1['master']=$_SESSION['master'];
+                        $where1['id']=$fileid;
+                        $save1=$User1->where($where1)->save($data1); 
+                        if ($save1) {
+                            echo 1;
+                        }
+                        else{
+                            echo 0;
+                        }
+            }
+        }
+
+
+//未审核文件的一系列操作*****************************
+
+    public function examinefiles(){
+        $m = M('files');      
+        $where = "ifshow=0";
+        $count = $m->where($where)->count();
+        // 实例化分页类
+        $p = new Page($count,10);
+        //$p = getpage($count,15);
+        $list = $m->field(true)->where($where)->order('id asc')->limit($p->firstRow, $p->listRows)->select();
+        $this->assign('select', $list); // 赋值数据集
+        $this->assign('page', $p->show()); // 赋值分页输出
+        $this->assign('count', $count); // 赋值数据集
+
+
+        $this->display("examinefiles");
+    }
+
+
 //外网投诉建议操作*****************************
     public function outwardadvise(){
 

@@ -69,12 +69,12 @@
                 	<li>
                         <a href="#" class="mws-i-24 i-folder" alt="4">文件管理</a>
                         <ul class="smallurl" id="smallurl4">
-                            <li><a href="#">全部文件</a></li>
-                            <li><a href="#">成员上传文件活跃度</a></li>
+                            <li><a href="<?php echo U('Admin/Manage/existfiles','','');?>" target="target1">现有文件</a></li>
+                            <li><a href="<?php echo U('Admin/Manage/examinefiles','','');?>" target="target1">未审核文件</a></li>
                         </ul>
                     </li>
                 	<li>
-                    	<a href="#" class="mws-i-24 i-multiple-users" alt="5">成员显示</a>
+                    	<a href="#" class="mws-i-24 i-multiple-users" alt="5">成员中心显示</a>
                         <ul class="smallurl" id="smallurl5">
                         	<li><a href="#">已显示成员</a></li>
                         	<li><a href="#">添加成员</a></li>
