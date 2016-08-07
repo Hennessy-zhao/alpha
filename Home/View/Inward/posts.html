@@ -1,33 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
-<link href="__PUBLIC__/Outward/Inward/css/post.css" rel="stylesheet" />
-<link href="__PUBLIC__/Outward/Inward/css/timeblogstyle.css" rel="stylesheet">
-<link href="__PUBLIC__/Outward/Inward/css/animation.css" rel="stylesheet">
-<link href="__PUBLIC__/Common/css/bootstrap.min.css" rel="stylesheet">
-<script type="text/javascript" src="__PUBLIC__/Common/js/jquery.js"></script>
-<script type="text/javascript" src="__PUBLIC__/Outward/Inward/js/js.js"></script>
-
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="__PUBLIC__/Outward/Inward/css/post.css" rel="stylesheet"/>
+    <link href="__PUBLIC__/Outward/Inward/css/timeblogstyle.css" rel="stylesheet">
+    <link href="__PUBLIC__/Outward/Inward/css/animation.css" rel="stylesheet">
+    <link href="__PUBLIC__/Common/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="__PUBLIC__/Common/js/jquery.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Outward/Inward/js/js.js"></script>
 </head>
-<body>
-<div id="templatemo_wrapper_outer">
-	<div id="templatemo_wrapper">
-    
-    	<div id="templatemo_header">
-			<div id="site_title">
-				<h1>PC System Discuss Center</h1>
-                <br/>
-                <p>计算机系统研发中心</p>
-			</div> <!-- end of site_title -->
-
-				
-			
-			<div class="cleaner"></div>
-		</div>
-        
-        <div id="templatemo_menu">
+<body ng-app="myapp">
+    <div class="col-md-12" id="top">
+        <div class="col-md-10" id="site_title">
+            <h1>PC System Discuss Center</h1>
+            <br/>
+            <p>计算机系统研发中心</p>
+        </div>
+        <div class="col-md-12" id="top_menu">
             <ul>
                 <li><a href="{:U('Home/Inward/index','','')}">主页</a></li>
                 <li><a href="{:U('Home/Inward/chat','','')}">聊天室</a></li>
@@ -36,178 +26,107 @@
                 <li><a href="{:U('Home/Inward/membercenter','','')}">成员中心</a></li>
                 <li style="float:right;"><a href="#">建议/投诉</a></li>
                 <li style="float:right;"><a href="{:U('Home/Main/index','','')}">外网页</a></li>
-            </ul>    	
-        </div> <!-- end of templatemo_menu -->
-        
-        
-        <!--时间轴开始-->
-        <div id="mainbody">
-            <div class="info">
-                <figure>
+            </ul>       
+        </div>
+    </div>
+    <div class="col-md-12" id="mainbody">
+        <div class="info col-md-12">
+                <figure class="col-md-9">
                     <img src="__PUBLIC__/Outward/Inward/images/art2.jpg">
                     <figcaption>
                         <strong>只要愿意学习&nbsp;&nbsp;就一定能学会</strong>
                         计算机专业是比较枯燥困难的一个专业，很多人望而却步，但是社团中的我们一直相信，只要愿意学习，用心去体悟，就一定可以学会、学好。本网站为社团内部成员提供一个互相交流的机会，彼此互相进步，克服困难。
                     </figcaption>
                 </figure>
-                <div class="card">
+                <div class="card col-md-3">
                      <object width="100%" height="100%"  classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553544800">
                         <param value="flash233.swf" name="movie">
                         <param value="high" name="quality">
                         <param value="transparent" name="wmode">
-                        <embed width="88%" height="95%" wmode="transparent" type="application/x-shockwave-flash"  quality="high" src="__PUBLIC__/Outward/Inward/flash/flash233.swf">
+                        <embed width="100%" height="95%" wmode="transparent" type="application/x-shockwave-flash"  quality="high" src="__PUBLIC__/Outward/Inward/flash/flash233.swf">
                     </object>
                 </div>
-            </div>
+        </div>
 
-        <!--info结束-->
 
         <!--博客的列表开始-->
-            <div class="blogs">
-                <ul class="bloglist">
-                    <li>
-                        <div class="row_box">
+            <div class="blogs col-md-12">
+                <ul class="bloglist col-md-9">
+                    <foreach name='select' item='data'>
+                    <li class="col-md-12">
+                        <div class="row_box col-md-12">
                             <div class="ti"></div><!--三角形-->
                             <div class="ci"></div><!--圆形-->
-                            <h2 class="title"> <a href="#">标题</a></h2>
+                            <h2 class="title"><a href="{:U('Home/Inward/postmessages',array('postid'=>$data['id']))}">{$data.title}</a></h2>
                             <ul class="textinfo">
                                 <div style="float:left">
-                                    <img src="__PUBLIC__/Outward/Inward/images/s1.jpg">
-                                    <p>发帖人：赵益石</p>
+                                    <img src="__PUBLIC__/userimg/{$data.img}">
+                                    <p class="p1">{$data.username}</p>
                                 </div>
-                                <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                                <p class="p2">{$data.messages}</p>
                             </ul>
-                            <ul class="details">
-                                <li class="likes"><a href="#">10</a></li>
-                                <li class="comments"><a href="#">34</a> </li>
-                                <li class="icon_time"><a href="#">2015-1-9</a></li>
+                            <ul class="details col-md-12">
+                                <li class="comments">{$data.comments}</li>
+                                <li class="icon_time">{$data.date}</li>
                             </ul>
                         </div>
                     </li>
-                    <li>
-                        <div class="row_box">
-                            <div class="ti"></div><!--三角形-->
-                            <div class="ci"></div><!--圆形-->
-                            <h2 class="title"> <a href="#">标题</a></h2>
-                            <ul class="textinfo">
-                                <div style="float:left">
-                                    <img src="__PUBLIC__/Outward/Inward/images/s1.jpg">
-                                    <p>发帖人：赵益石</p>
-                                </div>
-                                <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
-                            </ul>
-                            <ul class="details">
-                                <li class="likes"><a href="#">10</a></li>
-                                <li class="comments"><a href="#">34</a> </li>
-                                <li class="icon_time"><a href="#">2015-1-9</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row_box">
-                            <div class="ti"></div><!--三角形-->
-                            <div class="ci"></div><!--圆形-->
-                            <h2 class="title"> <a href="#">标题</a></h2>
-                            <ul class="textinfo">
-                                <div style="float:left">
-                                    <img src="__PUBLIC__/Outward/Inward/images/s1.jpg">
-                                    <p>发帖人：赵益石</p>
-                                </div>
-                                <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
-                            </ul>
-                            <ul class="details">
-                                <li class="likes"><a href="#">10</a></li>
-                                <li class="comments"><a href="#">34</a> </li>
-                                <li class="icon_time"><a href="#">2015-1-9</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row_box">
-                            <div class="ti"></div><!--三角形-->
-                            <div class="ci"></div><!--圆形-->
-                            <h2 class="title"> <a href="#">标题</a></h2>
-                            <ul class="textinfo">
-                                <div style="float:left">
-                                    <img src="__PUBLIC__/Outward/Inward/images/s1.jpg">
-                                    <p>发帖人：赵益石</p>
-                                </div>
-                                <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
-                            </ul>
-                            <ul class="details">
-                                <li class="likes"><a href="#">10</a></li>
-                                <li class="comments"><a href="#">34</a> </li>
-                                <li class="icon_time"><a href="#">2015-1-9</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row_box">
-                            <div class="ti"></div><!--三角形-->
-                            <div class="ci"></div><!--圆形-->
-                            <h2 class="title"> <a href="#">标题</a></h2>
-                            <ul class="textinfo">
-                                <div style="float:left">
-                                    <img src="__PUBLIC__/Outward/Inward/images/s1.jpg">
-                                    <p>发帖人：赵益石</p>
-                                </div>
-                                <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
-                            </ul>
-                            <ul class="details">
-                                <li class="likes"><a href="#">10</a></li>
-                                <li class="comments"><a href="#">34</a> </li>
-                                <li class="icon_time"><a href="#">2015-1-9</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    
+                    </foreach>
                 </ul>
             
             <!--博客列表部分结束-->
             
             
             <!--右半部分开始-->
-                <aside>
-                    <div class="tuijian" style="height:200px">
-                        
+                <aside class="col-md-3">
+                    <div class="masters">
+                        <h3>
+                            管理员
+                        </h3>
+                        <p>Wugao</p>
+                        <p>Hennessy-zhao</p>
                     </div>
-                    <div class="toppic" style="height:300px;">
-                        
-                    </div>
-                    <div class="clicks" style="height:200px;">
-                        
+                    <div class="rules">
+                         <h3>
+                            发帖规定
+                        </h3>
+                        <p>不得发和学习无关内容（灌水请到聊天区）</p>
+                        <p>语言礼貌，不可以辱骂他人 </p>
+                        <p>对于一些废贴管理员会依据帖子情况及时清理</p>
                     </div>
                 </aside>
             </div>
             <!--blogs结束-->
-        </div>
-        <!--mainbody结束-->
 
-        <!--时间轴结束-->
-		<div id="newpost">
+    </div>
+    <div class="col-md-10 col-md-offset-1" id="newpost" ng-controller="firstController">
+            <form action="{:U('Home/Inward/addnewpost')}" name="myForm" method="post">
             <div class="form-group">
-                <span class="posttitle">标题</span><input type="text" class="form-control" id="name" 
-                 placeholder="请输入新帖标题" style="width:80%;background-color:whitesmoke;">
+                <span class="posttitle">标题</span><input name="posttitle" autocomplete="off" type="text" class="form-control"
+                 placeholder="请输入新帖标题(字数为1-30)" style="width:80%;background-color:whitesmoke;" ng-required="true" minlength="1" maxlength="30">
             </div>
             <br>
             <div class="form-group">
-                <textarea class="form-control" rows="3" style="width:90%;background-color:whitesmoke;"></textarea>
+                <textarea name="messages" autocomplete="off" class="form-control" rows="3" style="width:90%;background-color:whitesmoke;" placeholder="请输入内容（字数在1-300）" ng-required="true" minlength="1" maxlength="300"></textarea>
             </div>   
             <br>
-            <button class="btn btn-success" style="padding-left:20px;padding-right:20px;">发&nbsp;&nbsp;帖</button> 
-        </div>
-		
-   
-		<div id="templatemo_footer">
-		
-             版权信息
-			 
-       </div>
+            <input type="submit" class="btn btn-success" style="padding-left:20px;padding-right:20px;" value="发  帖" ng-disabled="myForm.$invalid"> 
+            </form>
+    </div>
+    <div id="footer" class="col-md-12">
         
-	</div> <!-- end of wrapper -->
-</div> <!-- end of wrapper_outer -->
+             版权信息
+             
+    </div>
 
 
 
+<script src="__PUBLIC__/Common/js/angular.min.js"></script>
+<script>
+  angular.module("myapp",[])
+  .controller("firstController",['$scope',function($scope){
+     
+  }])
+</script>
 </body>
 </html>

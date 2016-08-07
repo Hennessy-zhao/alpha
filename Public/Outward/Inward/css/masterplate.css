@@ -88,26 +88,27 @@ body{
 
 /*** end of top  ****/
 
-
-#newpost{
-	background-color: rgb(34,34,34);
-	margin-top: 50px;
-	padding-top: 30px;
-	padding-left: 40px;
-	padding-bottom: 30px;
-	border: 1px solid rgb(24,24,24);
-	border-radius: 10px;
-	overflow: hidden;
+#content{
+	height: 500px;
+	padding-left:50px;
+	padding-top: 20px;
+	padding-bottom: 80px;
+	background-image: url(../images/templatemo_content.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	float: left;
 }
 
-		span.posttitle{
-			float: left;
-			font-size: 1.2em;
-			color: whitesmoke;
-			font-family: 微软雅黑;
-			font-weight: bold;
-			margin-right: 10px;
-		}
+
+		
+.hr_divider {
+	clear: both;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	background: url(../images/templatemo_hr_divider.png) bottom repeat-x;	
+}
+
+
 
 
 /* footer */

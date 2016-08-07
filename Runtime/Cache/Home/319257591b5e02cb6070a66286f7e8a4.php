@@ -1,49 +1,40 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>文件共享中心</title>
-<link href="/alpha/Public/Outward/Inward/css/files.css" rel="stylesheet" />
-<link href="/alpha/Public/Common/css/bootstrap.min.css" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <title></title>
+  <link href="/alpha/Public/Outward/Inward/css/files.css" rel="stylesheet"/>
+  <link href="/alpha/Public/Common/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-<div id="templatemo_wrapper_outer">
-	<div id="templatemo_wrapper">
-    
-    	<div id="templatemo_header">
-			<div id="site_title">
-				<h1>PC System Discuss Center</h1>
-                <br/>
-                <p>计算机系统研发中心</p>
-			</div> <!-- end of site_title -->
 
-				
-			
-			<div class="cleaner"></div>
-		</div>
-        
-        <div id="templatemo_menu">
-            <ul>
+<body ng-app="myapp">
+  <div class="col-md-12" id="top">
+    <div class="col-md-10" id="site_title">
+      <h1>PC System Discuss Center</h1>
+            <br/>
+            <p>计算机系统研发中心</p>
+    </div>
+    <div class="col-md-12" id="top_menu">
+      <ul>
                 <li><a href="<?php echo U('Home/Inward/index','','');?>">主页</a></li>
                 <li><a href="<?php echo U('Home/Inward/chat','','');?>">聊天室</a></li>
                 <li><a href="<?php echo U('Home/Inward/posts','','');?>">发帖区</a></li>
                 <li><a href="#" class="current">学习文件</a></li>
-                <li><a href="<?php echo U('Home/Inward/membercenter','','');?>">成员中心</a></li>
+                <li><a href="<?php echo U('Home/Inward/membercenter','','');?>" >成员中心</a></li>
                 <li style="float:right;"><a href="#">建议/投诉</a></li>
                 <li style="float:right;"><a href="<?php echo U('Home/Main/index','','');?>">外网页</a></li>
-            </ul>    	
-        </div> <!-- end of templatemo_menu -->
-        
-        
-        
-        <div id="templatemo_content_wrapper">
-			<div id="content" ng-app="myapp">
-            	<h4><img src="/alpha/Public/Outward/Inward/images/templatemo_list.png" >&nbsp;&nbsp;文件列表
+            </ul>     
+    </div>
+  </div>
+
+  <div class="col-md-12" style="padding:0 2% 0 2%;">
+        <div id="content" class="col-md-12">
+          <h4><img src="/alpha/Public/Outward/Inward/images/templatemo_list.png" >&nbsp;&nbsp;文件列表
                 <div class="btn_more" data-toggle="modal" data-target="#myModal">上传新文件</div>
-                </h4>
-                <!-- 模态框（Modal） -->
-                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
+            </h4>
+      
+      <!-- 膜态框  *********************** -->
+       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
                        aria-labelledby="myModalLabel" aria-hidden="true">
                        <div class="modal-dialog">
                           <div class="modal-content">
@@ -74,11 +65,12 @@
                           </div><!-- /.modal-content -->
                         </div><!-- /.modal -->
                     </div>
-                <div class="hr_divider"></div>
-                <p class="ps">提示：下载图片文件、txt文件和pdf文件会在页面中打开，需另存</p>
-                <br>
-                <div class="boxes">
-                    <?php if(is_array($select)): foreach($select as $key=>$data): ?><div class="grid_4">
+      <!-- 膜态框结束 -->
+      <br>
+      <div class="hr_divider col-md-11"></div>
+      <p class="ps col-md-12">提示：下载图片文件、txt文件和pdf文件会在页面中打开，需另存</p>
+      <div class="boxes">
+        <?php if(is_array($select)): foreach($select as $key=>$data): ?><div class="grid_4 col-md-3">
                         <figure>
                             <div><img src="/alpha/Public/Outward/Inward/images/files.jpg" alt=""></div>
                              <figcaption>  
@@ -89,26 +81,20 @@
                         </figure>
                         <p class="p3"><?php echo ($data["filename"]); ?></p>
                     </div><?php endforeach; endif; ?>
-                </div>
             </div>
-            <div class="cleaner"></div>        
-        
-		</div>
-		
-		<div id="templatemo_content_wrapper_bottm"></div>
-   
-		<div id="templatemo_footer">
-		
+        </div>
+    </div>
+  
+  <div id="footer" class="col-md-12">
+    
              版权信息
-			 
-       </div>
-        
-	</div> <!-- end of wrapper -->
-</div> <!-- end of wrapper_outer -->
+       
+    </div>
 
-    <script src="/alpha/Public/Common/js/jquery-2.1.4.min.js"></script>
-    <script src="/alpha/Public/Common/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
+
+ <script src="/alpha/Public/Common/js/jquery-2.1.4.min.js"></script>
+<script src="/alpha/Public/Common/js/bootstrap.min.js"></script>
+<script type="text/javascript">
 $(function(){
 
   $("input[type=file]").change(function(){
@@ -129,7 +115,7 @@ $(function(){
 <script>
   angular.module("myapp",[])
   .controller("firstController",['$scope',function($scope){
-      $scope.names="aaa"
+     
   }])
 </script>
 </body>

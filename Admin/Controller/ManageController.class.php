@@ -159,6 +159,11 @@ class ManageController extends Controller {
             if ($manage==0) {
                 $User = M("files"); // 实例化User对象
                 $where2['id']=$fileid;
+
+                $list = $User->where($where2)->select();
+
+                unlink("./Public/files/".$list[0]['filesrc']); 
+              
                 $res=$User->where($where2)->delete(); 
                 if ($res) {
                     echo 1;
@@ -166,10 +171,24 @@ class ManageController extends Controller {
                 else
                     echo 0;
             }
-            else{
-                 $User1 = M("files"); // 实例化User对象
+            else if($manage==1){
+                $User1 = M("files"); // 实例化User对象
                         // 要修改的数据对象属性赋值
                         $data1['ifshow'] = 1;
+                        $data1['master']=$_SESSION['master'];
+                        $where1['id']=$fileid;
+                        $save1=$User1->where($where1)->save($data1); 
+                        if ($save1) {
+                            echo 1;
+                        }
+                        else{
+                            echo 0;
+                        }
+            }
+            else{
+                $User1 = M("files"); // 实例化User对象
+                        // 要修改的数据对象属性赋值
+                        $data1['ifshow'] = 0;
                         $data1['master']=$_SESSION['master'];
                         $where1['id']=$fileid;
                         $save1=$User1->where($where1)->save($data1); 

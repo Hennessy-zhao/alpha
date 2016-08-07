@@ -71,8 +71,8 @@
 										      <span class="sr-only"></span>
 										   </button>
 										   <ul class="dropdown-menu" role="menu" alt="<?php echo ($data["id"]); ?>">
-										      <li><a href="#" class="managebtn" alt="4">不在页面中显示</a></li>
-										      <li><a href="#" class="managebtn" alt="3">删除</a></li>
+										      <li><a href="#" class="managebtn" alt="-1">不在页面中显示</a></li>
+										      <li><a href="#" class="managebtn" alt="0">删除</a></li>
 										   </ul>
 										</div>
 									</td>
@@ -92,6 +92,32 @@
 		$(function(){
 			$(".mws-table").find("tr:even").addClass("odd");
 			$(".mws-table").find("tr:odd").addClass("even");
+		})
+	</script>
+	<script>
+		$(function(){
+			$(".managebtn").on("click",function(){
+				var manage=$(this).attr("alt");
+				var fileid=$(this).parent().parent(".dropdown-menu").attr("alt");
+
+				if (manage==0) alertmessage="确定删除此文件吗";
+				else alertmessage="确定此文件不被显示吗（即再次划分为未审核文件）";
+
+				if (confirm(alertmessage)) {
+					$.post("<?php echo U('Admin/Manage/managefiles','','');?>",{
+					          	fileid : fileid,
+					          	manage : manage
+					},function(data){
+						if (data==1) {
+						    $(".rank"+fileid).css("display","none");
+						}
+						else{
+						    alert("系统出现问题");
+						}
+					})
+				};
+				
+			})
 		})
 	</script>
 	
