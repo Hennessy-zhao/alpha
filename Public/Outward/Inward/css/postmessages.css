@@ -89,7 +89,7 @@ body{
 /*** end of top  ****/
 
 #content{
-	height: 500px;
+	height: auto;
 	padding-left:5%;
 	padding-right:5%;
 	padding-bottom: 80px;
@@ -111,7 +111,7 @@ body{
 
 
 		#firstcomment{
-			margin:0px;
+			margin:0 0 20px 0;
 			padding: 10px;
 			border: 1px dashed rgba(255,255,255,0.5);
 		}
@@ -138,9 +138,15 @@ body{
 			font-weight: 500;
 		}
 
+		#usercomment{
+			height: auto;
+			border-left: 1px dashed rgba(247,248,250,0.15);
+			margin:0px;
+			padding: 0px;
+		}
+
 		#usermessage{
 			min-height: 180px;
-			border-left: 1px dashed rgba(247,248,250,0.15);
 			color: white;
 			font-family: 微软雅黑;
 			font-size: 1.15em;
@@ -151,8 +157,195 @@ body{
 		#others{
 			height: auto;
 			float: right;
-			border: 1px solid white;
+			color: whitesmoke;
+			text-align: right;
+			font-size: 0.9em;
+		}
+
+				#others span.glyphicon{
+					cursor: pointer;
+				}
+
+				#others span.glyphicon:hover{
+					font-size: 1.2em;
+				}
+
+				#others span.good{
+					margin: 0 2% 0 0;
+				}
+
+				#others span.time{
+					margin: 0 2% 0 0;
+				}
+
+				#others span.lookcomment{
+					margin: 0 2% 0 0;
+					cursor: pointer;
+				}
+
+				#others span.lookcomment:hover{
+					text-decoration: underline;
+					cursor: pointer;
+				}
+
+				#others span.reply{
+					margin: 0 2% 0 0;
+					cursor: pointer;
+				}
+
+				#others span.reply:hover{
+					text-decoration: underline;
+					cursor: pointer;
+				}
+
+				#others > .newcomment{
+					float: right;
+					margin:5px 0 5px 0;
+					display: none;
+				}
+
+				#others > .newcomment >textarea{
+					width: 80%;
+					height: 40px;
+					margin-left: 10%;
+					float: left;
+				}
+
+				#others > .newcomment >button{
+					float: left;
+					margin:10px 0 0 1%;
+					padding: 3px 2% 3px 2%;
+				}
+
+		#secondcomment{
+			float: right;
+			height: auto;
+			background-color: rgba(255,255,255,0.05);
+			border: 1px solid rgba(255,255,255,0.1);
+			margin:0px;
+			padding: 0px;
+		}
+
+		#onesecondcomment{
+			height: auto;
+			margin:0;
+			padding: 10px 0 10px 1%;
+			border-bottom: 1px solid rgba(255,255,255,0.1)
+		}
+				#secondimg{
+					padding: 0px;
+				}
+
+				#secondimg >img{
+					width: 100%;
+					border-radius: 4px;
+				}
+
+				#secondmessage{
+					margin:0 0 0 3%;
+					padding: 0px;
+					font-size: 1em;
+				}
+
+				#secondmessage p.message{
+					color: whitesmoke;
+					font-size: 1em;
+					margin:0px;
+				}
+
+				#secondmessage span.username{
+					color: white;
+					margin: 0 2% 0 0;
+				}
+
+				#secondmessage span.replys{
+					color: rgb(89, 170, 255);
+					margin: 0 2% 0 0;
+				}
+
+				#secondother{
+					height: auto;
+					float: right;
+					margin:5px 5% 0 0 ;
+					padding: 0px;
+					font-size: 0.9em;
+					color: white;
+					text-align: right;
+				}
+
+
+				#secondother span.glyphicon{
+					cursor: pointer;
+				}
+
+				#secondother span.glyphicon:hover{
+					font-size: 1.2em;
+				}
+
+				#secondother span.good{
+					margin: 0 2% 0 0;
+				}
+
+				#secondother span.time{
+					margin: 0 2% 0 0;
+				}
+
+				#secondother span.reply{
+					margin: 0 2% 0 0;
+					cursor: pointer;
+				}
+
+				#secondother span.reply:hover{
+					text-decoration: underline;
+					cursor: pointer;
+				}
+
+				#secondother > .newcomment{
+					float: right;
+					margin:5px 0 5px 0;
+					padding: 0px;
+					display: none;
+				}
+
+				#secondother > .newcomment >textarea{
+					width: 80%;
+					height: 35px;
+					margin-left: 8%;
+					float: left;
+				}
+
+				#secondother > .newcomment >button{
+					float: left;
+					margin:10px 0 0 1%;
+					padding: 2px 2% 2px 2%;
+				}
+
+
+
+	#newfirstcomment{
+		height: auto;
+		padding: 0px;
+		margin:30px 0 0 0;
+	}
+
+		#newfirstcomment h3{
+			color: rgb(89, 170, 255);
+			margin:0 0 10px 0;
+			padding: 0px; 
+			letter-spacing: 3px;
+		}
+
+		#newfirstcomment h4{
 			color: white;
+		}
+
+		#newfirstcomment button{
+			margin:10px 0 0 0;
+			font-weight: bold;
+			background-color: rgb(89, 170, 255);
+			color: white;
+			border: 1px solid rgba(0,0,0,0.2);
+			letter-spacing:2px;
 		}
 
 
