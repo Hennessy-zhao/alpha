@@ -30,22 +30,40 @@
     <div class="col-md-12" style="padding:0 2% 0 2%;">
         <div id="content" class="col-md-12">
             <h3 class="title">
-                这是题目
+                <?php echo ($select1[0]['title']); ?>
             </h3>
             <div class="hr_divider col-md-11"></div>
             <div class="col-md-12" id="firstcomment">
                 <div class="col-md-2" id="userimg">
                     
-                        <img src="/alpha/Public/userimg/userimg.jpg" alt=""> <p class="username">Hennessy-zhao</p>
+                        <img src="/alpha/Public/userimg/<?php echo ($select1[0]['img']); ?>" alt=""> <p class="username"><?php echo ($select1[0]['username']); ?></p>
                 </div>
                 <div class="col-md-10" id="usercomment">
                     <div class="col-md-12" id="usermessage">
-                        爱上对方过后就哭了自行车把你们千万儿童与欧普自行车不能马上的风格和接口里千万儿童与欧普千万儿童与欧普。
+                    <?php echo ($select1[0]['messages']); ?>
+                    </div>
+                    <div class="col-md-12" id="others">
+                        <span class="time"><?php echo ($select1[0]['date']); ?></span>
+                        <a href="#newtext"><span class="firstreply">回复</span></a>
+                        
+                    </div>
+                </div>
+                
+                
+            </div>
+            <?php if(is_array($select2)): foreach($select2 as $key=>$data): if(($data["fid"] == 0)): ?><div class="col-md-12" id="firstcomment">
+                <div class="col-md-2" id="userimg">
+                    
+                        <img src="/alpha/Public/userimg/<?php echo ($data['img']); ?>" alt=""> <p class="username"><?php echo ($data['username']); ?></p>
+                </div>
+                <div class="col-md-10" id="usercomment">
+                    <div class="col-md-12" id="usermessage">
+                        <?php echo ($data['messages']); ?>
                     </div>
                     <div class="col-md-12" id="others">
                         <span class="glyphicon glyphicon-thumbs-up"></span>
-                        <span class="good">356</span>
-                        <span class="time">2016-3-4</span>
+                        <span class="good"><?php echo ($data['good']); ?></span>
+                        <span class="time"><?php echo ($data['date']); ?></span>
                         <span class="lookcomment">收起回复</span>
                         <span class="reply">回复</span>
                         <div class="col-md-10 newcomment">
@@ -54,7 +72,7 @@
                         </div>
                         
                     </div>
-                    <div class="col-md-11" id="secondcomment">
+                    <div class="col-md-11 secondcomment" id="secondcomment">
                         <div class="col-md-12" id="onesecondcomment">
                             <div class="col-md-1" id="secondimg">
                                 <img src="/alpha/Public/userimg/userimg.jpg" alt="">
@@ -95,11 +113,11 @@
                 </div>
                 
                 
-            </div>
+            </div><?php endif; endforeach; endif; ?>
            <div class="col-md-10" id="newfirstcomment">
                 <h3>发表评论</h3>
-                <form action="<?php echo U('Home/Inward/addnewcomment');?>" name="myForm" method="post">
-                   <textarea class="form-control" required="true" rows="5" placeholder="我想说......"></textarea>
+                <form action="<?php echo U('Home/Inward/addnewcomment',array('postid'=>$select1[0]['id'],'userid'=>$select1[0]['userid']));?>" name="myForm" method="post">
+                   <textarea id="newtext" name="newtext" class="form-control" required="true" rows="5" placeholder="我想说......"></textarea>
                    <h4>评论者：&nbsp;&nbsp;<?php echo ($_SESSION['user']); ?></h4>
                    <button class="btn">发表评论</button>
                </form>
@@ -130,9 +148,25 @@
 </script>
 
 <script>
+    //回复框的出现和隐藏
     $(function(){
         $(".reply").on("click",function(){
             $(this).siblings(".newcomment").toggle()
+        })
+    })
+
+    //评论的出现和隐藏
+    $(function(){
+        $(".lookcomment").on("click",function(){
+            $(this).parent().siblings(".secondcomment").toggle();
+
+            if ($(this).text()=="收起回复") {
+                $(this).text("查看回复")
+            }
+            else{
+                $(this).text("收起回复")
+
+            }
         })
     })
 </script>

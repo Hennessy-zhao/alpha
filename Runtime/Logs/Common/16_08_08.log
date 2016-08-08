@@ -1,0 +1,24 @@
+[ 2016-08-08T20:12:10+08:00 ] ::1 /alpha/index.php/Inward/postmessages/postid/2.html.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000679s ]
+ERR: 无法加载模块:Inward
+
+[ 2016-08-08T20:12:26+08:00 ] ::1 /alpha/index.php/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000728s ]
+ERR: 无法加载模块:Inward
+
+[ 2016-08-08T20:12:38+08:00 ] ::1 /alpha/index.php/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000677s ]
+ERR: 无法加载模块:Inward
+
+[ 2016-08-08T20:12:58+08:00 ] ::1 /alpha/index.php/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000960s ]
+ERR: 无法加载模块:Inward
+

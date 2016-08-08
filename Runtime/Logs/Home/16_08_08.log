@@ -3983,3 +3983,991 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000997s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001072s ]
 
+[ 2016-08-08T19:29:12+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001447s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001882s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001998s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000255s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001254s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025527s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025623s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000944s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001207s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001312s ]
+
+[ 2016-08-08T19:32:05+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001231s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001290s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000176s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014082s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000869s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000918s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002102s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002179s ]
+
+[ 2016-08-08T19:32:58+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004507s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001023s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001110s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000108s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000194s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013480s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013563s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000552s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000734s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000786s ]
+
+[ 2016-08-08T19:33:01+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000812s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000910s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000987s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000152s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011367s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011428s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000606s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000655s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001248s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001322s ]
+
+[ 2016-08-08T19:45:29+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001032s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002870s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0067s ]
+NOTIC: [8] Undefined variable: m E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 47 行.
+
+[ 2016-08-08T19:45:40+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000924s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001126s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001216s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000181s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016670s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016796s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001087s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001145s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002827s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002961s ]
+
+[ 2016-08-08T19:48:07+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000966s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002092s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002201s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `posttitles` WHERE `id` = 2  [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000122s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000265s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020702s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020824s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000955s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001023s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003077s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003179s ]
+
+[ 2016-08-08T19:48:22+08:00 ] ::1 /alpha/index.php/Home/Inward/posts
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000889s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002168s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002256s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0053s ]
+NOTIC: [8] Undefined variable: count E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0063s ]
+SQL: SELECT post.id as id,post.title as title,post.messages as messages,post.postdate as date,post.replycount as comments,user.username as username,user.userimg as img FROM posttitles post,user user WHERE ( post.userid=user.id ) ORDER BY post.id desc LIMIT 0,20   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000175s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016793s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016864s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000982s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001034s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001107s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001160s ]
+
+[ 2016-08-08T19:48:27+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002096s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005003s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0136s ]
+SQL: SELECT * FROM `posttitles` WHERE `id` = 1  [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000211s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024384s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024934s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001965s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002149s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001434s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001531s ]
+
+[ 2016-08-08T19:57:48+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000962s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004794s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004915s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0062s ]
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 46 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 46 行.
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 46 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 46 行.
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0065s ]
+SQL: SELECT post.id as id,post.title as title,post.messages as messages,post.postdate as date,post.replycount as comments,user.username as username,user.userimg as img FROM posttitles post,user user WHERE ( post.id=1 and post.userid=user.id ) ORDER BY post.id desc  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000135s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000245s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014279s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014393s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001056s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001114s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001122s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001179s ]
+
+[ 2016-08-08T19:59:42+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000913s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001107s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001183s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0064s ]
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 46 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 46 行.
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 46 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 46 行.
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0060s ]
+SQL: SELECT post.id as id,post.title as title,post.messages as messages,post.postdate as date,user.username as username,user.userimg as img FROM posttitles post,user user WHERE ( post.id=1 and post.userid=user.id ) ORDER BY post.id desc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000147s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000250s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013356s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013498s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000918s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001313s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001402s ]
+
+[ 2016-08-08T19:59:48+08:00 ] ::1 /alpha/index.php/Home/Inward/posts
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001016s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001240s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001348s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0091s ]
+NOTIC: [8] Undefined variable: count E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0080s ]
+SQL: SELECT post.id as id,post.title as title,post.messages as messages,post.postdate as date,post.replycount as comments,user.username as username,user.userimg as img FROM posttitles post,user user WHERE ( post.userid=user.id ) ORDER BY post.id desc LIMIT 0,20   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000254s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018029s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018144s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001017s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001099s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001339s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001434s ]
+
+[ 2016-08-08T19:59:51+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000952s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004635s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004935s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0085s ]
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 46 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 46 行.
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 46 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 46 行.
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0119s ]
+SQL: SELECT post.id as id,post.title as title,post.messages as messages,post.postdate as date,user.username as username,user.userimg as img FROM posttitles post,user user WHERE ( post.id=2 and post.userid=user.id ) ORDER BY post.id desc  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000250s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021419s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021620s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002830s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003016s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002900s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003031s ]
+
+[ 2016-08-08T20:03:45+08:00 ] ::1 /alpha/index.php/Home/Inward/posts
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001291s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001225s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001308s ]
+
+[ 2016-08-08T20:04:11+08:00 ] ::1 /alpha/index.php/Home/Inward/posts
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000652s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000888s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000944s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0063s ]
+NOTIC: [8] Undefined variable: count E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0060s ]
+SQL: SELECT post.id as id,post.title as title,post.messages as messages,post.postdate as date,post.replycount as comments,user.username as username,user.userimg as img FROM posttitles post,user user WHERE ( post.userid=user.id ) ORDER BY post.id desc LIMIT 0,20   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000149s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013961s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014084s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000893s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000945s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001123s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001180s ]
+
+[ 2016-08-08T20:04:17+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001854s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003485s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0133s ]
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0118s ]
+SQL: SELECT post.id as id,post.title as title,post.messages as messages,post.postdate as date,user.username as username,user.userimg as img FROM posttitles post,user user WHERE ( post.id=2 and post.userid=user.id ) ORDER BY post.id desc  [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000170s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000295s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022502s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022653s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001488s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001575s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001559s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001642s ]
+
+[ 2016-08-08T20:12:00+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001214s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001551s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0077s ]
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0070s ]
+SQL: SELECT post.id as id,post.title as title,post.messages as messages,post.postdate as date,user.username as username,user.userimg as img FROM posttitles post,user user WHERE ( post.id=2 and post.userid=user.id ) ORDER BY post.id desc  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014141s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014246s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001142s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001212s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002164s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002379s ]
+
+[ 2016-08-08T20:12:10+08:00 ] ::1 /alpha/index.php/Home/Inward/addnewcomment/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000076s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001759s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001827s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001941s ]
+
+[ 2016-08-08T20:12:26+08:00 ] ::1 /alpha/index.php/Home/Inward/addnewcomment/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001107s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001136s ]
+
+[ 2016-08-08T20:12:31+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000804s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000859s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000915s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0070s ]
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0074s ]
+SQL: SELECT post.id as id,post.title as title,post.messages as messages,post.postdate as date,user.username as username,user.userimg as img FROM posttitles post,user user WHERE ( post.id=2 and post.userid=user.id ) ORDER BY post.id desc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000201s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017357s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017481s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001342s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001439s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001379s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001445s ]
+
+[ 2016-08-08T20:12:38+08:00 ] ::1 /alpha/index.php/Home/Inward/addnewcomment/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001503s ]
+
+[ 2016-08-08T20:12:56+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000890s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001256s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0068s ]
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0065s ]
+SQL: SELECT post.id as id,post.title as title,post.messages as messages,post.postdate as date,user.username as username,user.userimg as img FROM posttitles post,user user WHERE ( post.id=2 and post.userid=user.id ) ORDER BY post.id desc  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000211s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015346s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015461s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000853s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000901s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001173s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001237s ]
+
+[ 2016-08-08T20:12:58+08:00 ] ::1 /alpha/index.php/Home/Inward/addnewcomment/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001202s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001964s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002104s ]
+
+[ 2016-08-08T20:13:14+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001115s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001419s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0068s ]
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0056s ]
+SQL: SELECT post.id as id,post.title as title,post.messages as messages,post.postdate as date,user.username as username,user.userimg as img FROM posttitles post,user user WHERE ( post.id=2 and post.userid=user.id ) ORDER BY post.id desc  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000246s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000358s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017863s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018131s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000948s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001036s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002896s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002993s ]
+
+[ 2016-08-08T20:13:16+08:00 ] ::1 /alpha/index.php/Home/Inward/addnewcomment/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000735s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001133s ]
+
+[ 2016-08-08T20:13:16+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000737s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001236s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001343s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0084s ]
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0075s ]
+SQL: SELECT post.id as id,post.title as title,post.messages as messages,post.postdate as date,user.username as username,user.userimg as img FROM posttitles post,user user WHERE ( post.id=2 and post.userid=user.id ) ORDER BY post.id desc  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000180s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016584s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016773s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001095s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001229s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002131s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002251s ]
+
+[ 2016-08-08T20:17:01+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001555s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002592s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002724s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0066s ]
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0069s ]
+SQL: SELECT post.id as id,post.title as title,post.messages as messages,post.postdate as date,user.username as username,user.userimg as img FROM posttitles post,user user WHERE ( post.id=2 and post.userid=user.id ) ORDER BY post.id desc  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000150s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000253s ]
+
+[ 2016-08-08T20:17:14+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002028s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001486s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001583s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0074s ]
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0084s ]
+SQL: SELECT post.id as id,post.title as title,post.messages as messages,post.postdate as date,user.username as username,user.userimg as img FROM posttitles post,user user WHERE ( post.id=2 and post.userid=user.id ) ORDER BY post.id desc  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000150s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000253s ]
+
+[ 2016-08-08T20:17:17+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001094s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001183s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0072s ]
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0089s ]
+SQL: SELECT post.id as id,post.title as title,post.messages as messages,post.postdate as date,user.username as username,user.userimg as img FROM posttitles post,user user WHERE ( post.id=2 and post.userid=user.id ) ORDER BY post.id desc  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+
+[ 2016-08-08T20:17:28+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000749s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000905s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000980s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0069s ]
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0088s ]
+SQL: SELECT post.id as id,post.title as title,post.messages as messages,post.postdate as date,user.username as username,user.userimg as img FROM posttitles post,user user WHERE ( post.id=2 and post.userid=user.id ) ORDER BY post.id desc  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000200s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016979s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017132s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001377s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001453s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001602s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001687s ]
+
+[ 2016-08-08T20:17:34+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001174s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001813s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001978s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0091s ]
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0072s ]
+SQL: SELECT post.id as id,post.title as title,post.messages as messages,post.postdate as date,user.username as username,user.userimg as img FROM posttitles post,user user WHERE ( post.id=2 and post.userid=user.id ) ORDER BY post.id desc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000245s ]
+
+[ 2016-08-08T20:17:41+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000909s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001161s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001252s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0069s ]
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0075s ]
+SQL: SELECT post.id as id,post.title as title,post.messages as messages,post.postdate as date,user.username as username,user.userimg as img FROM posttitles post,user user WHERE ( post.id=2 and post.userid=user.id ) ORDER BY post.id desc  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000119s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000204s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018706s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018898s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000803s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000880s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001104s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001181s ]
+
+[ 2016-08-08T20:19:54+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002069s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001813s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001920s ]
+
+[ 2016-08-08T20:20:09+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002627s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001754s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001875s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0077s ]
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0097s ]
+SQL: SELECT post.id as id,post.title as title,post.messages as messages,post.postdate as date,user.id as userid,user.username as username,user.userimg as img FROM posttitles post,user user WHERE ( post.id=2 and post.userid=user.id ) ORDER BY post.id desc  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000146s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000250s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019495s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019620s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001256s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001342s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002346s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002515s ]
+
+[ 2016-08-08T20:20:32+08:00 ] ::1 /alpha/index.php/Home/Inward/addnewcomment/postid/2/userid/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001648s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003207s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003590s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0084s ]
+SQL: INSERT INTO `posttitles` (`userid`,`messages`) VALUES ('1','爱上对方过后就哭了自行车把你们千万儿童与欧普千万儿童与欧普') [ RunTime:0.0840s ]
+
+[ 2016-08-08T20:20:32+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000942s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002438s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002573s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0057s ]
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0073s ]
+SQL: SELECT post.id as id,post.title as title,post.messages as messages,post.postdate as date,user.id as userid,user.username as username,user.userimg as img FROM posttitles post,user user WHERE ( post.id=2 and post.userid=user.id ) ORDER BY post.id desc  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000165s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000271s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017898s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018042s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000836s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000914s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001478s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001593s ]
+
+[ 2016-08-08T20:22:11+08:00 ] ::1 /alpha/index.php/Home/Inward/addnewcomment/postid/2/userid/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000359s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004908s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002193s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002329s ]
+SQL: SHOW COLUMNS FROM `postcomments` [ RunTime:0.0091s ]
+SQL: INSERT INTO `postcomments` (`titleid`,`fid`,`userid`,`messages`,`commentdate`) VALUES ('2','0','1','爱上对方过后就哭了QWERTYUI哦破自行车把你们','16-08-08 20:22:11') [ RunTime:0.0551s ]
+
+[ 2016-08-08T20:22:11+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000919s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001120s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001230s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0075s ]
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Undefined variable: p E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+NOTIC: [8] Trying to get property of non-object E:\PHP\xampp\htdocs\alpha\Home\Controller\InwardController.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0087s ]
+SQL: SELECT post.id as id,post.title as title,post.messages as messages,post.postdate as date,user.id as userid,user.username as username,user.userimg as img FROM posttitles post,user user WHERE ( post.id=2 and post.userid=user.id ) ORDER BY post.id desc  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000154s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000268s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022741s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022935s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001401s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001478s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001843s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001964s ]
+
+[ 2016-08-08T20:28:10+08:00 ] ::1 /alpha/index.php/Home/Inward/addnewcomment/postid/2/userid/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001593s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006896s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007069s ]
+SQL: SHOW COLUMNS FROM `postcomments` [ RunTime:0.0069s ]
+SQL: INSERT INTO `postcomments` (`titleid`,`fid`,`userid`,`messages`,`commentdate`) VALUES ('2','0','1','大雪纷飞是国家级口令卡分GV不看韩剧了个人的天赋vjgbhkjl如附图一干部和怒江','16-08-08 20:28:10') [ RunTime:0.0489s ]
+
+[ 2016-08-08T20:28:10+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001495s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001588s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001822s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0078s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0068s ]
+SQL: SELECT post.id as id,post.title as title,post.messages as messages,post.postdate as date,user.id as userid,user.username as username,user.userimg as img FROM posttitles post,user user WHERE ( post.id=2 and post.userid=user.id ) ORDER BY post.id desc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `postcomments` [ RunTime:0.0063s ]
+SQL: SHOW COLUMNS FROM `postcomments` [ RunTime:0.0079s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'post.userid=user.id )' at line 1
+ [ SQL语句 ] : SELECT post.id as id,post.titleid as titleid,post.fid as postfid,post.messages as messages,post.commentdate as date,user.id as userid,user.username as username,user.userimg as img FROM postcomments post,user user WHERE ( post.titleid=2and post.userid=user.id ) 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'post.userid=user.id )' at line 1
+ [ SQL语句 ] : SELECT post.id as id,post.titleid as titleid,post.fid as postfid,post.messages as messages,post.commentdate as date,user.id as userid,user.username as username,user.userimg as img FROM postcomments post,user user WHERE ( post.titleid=2and post.userid=user.id ) 
+
+[ 2016-08-08T20:28:16+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003192s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006181s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006319s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0114s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0086s ]
+SQL: SELECT post.id as id,post.title as title,post.messages as messages,post.postdate as date,user.id as userid,user.username as username,user.userimg as img FROM posttitles post,user user WHERE ( post.id=2 and post.userid=user.id ) ORDER BY post.id desc  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `postcomments` [ RunTime:0.0106s ]
+SQL: SHOW COLUMNS FROM `postcomments` [ RunTime:0.0107s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'post.userid=user.id )' at line 1
+ [ SQL语句 ] : SELECT post.id as id,post.titleid as titleid,post.fid as postfid,post.messages as messages,post.commentdate as date,user.id as userid,user.username as username,user.userimg as img FROM postcomments post,user user WHERE ( post.titleid=2and post.userid=user.id ) 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'post.userid=user.id )' at line 1
+ [ SQL语句 ] : SELECT post.id as id,post.titleid as titleid,post.fid as postfid,post.messages as messages,post.commentdate as date,user.id as userid,user.username as username,user.userimg as img FROM postcomments post,user user WHERE ( post.titleid=2and post.userid=user.id ) 
+
+[ 2016-08-08T20:33:06+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000257s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001738s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002222s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002477s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0074s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0072s ]
+SQL: SELECT post.id as id,post.title as title,post.messages as messages,post.postdate as date,user.id as userid,user.username as username,user.userimg as img FROM posttitles post,user user WHERE ( post.id=2 and post.userid=user.id ) ORDER BY post.id desc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `postcomments` [ RunTime:0.0087s ]
+SQL: SHOW COLUMNS FROM `postcomments` [ RunTime:0.0069s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'post.userid=user.id )' at line 1
+ [ SQL语句 ] : SELECT post.id as id,post.titleid as titleid,post.fid as postfid,post.messages as messages,post.commentdate as date,user.id as userid,user.username as username,user.userimg as img FROM postcomments post,user user WHERE ( post.titleid=2and post.userid=user.id ) 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'post.userid=user.id )' at line 1
+ [ SQL语句 ] : SELECT post.id as id,post.titleid as titleid,post.fid as postfid,post.messages as messages,post.commentdate as date,user.id as userid,user.username as username,user.userimg as img FROM postcomments post,user user WHERE ( post.titleid=2and post.userid=user.id ) 
+
+[ 2016-08-08T20:33:07+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001686s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001237s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001338s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0077s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0090s ]
+SQL: SELECT post.id as id,post.title as title,post.messages as messages,post.postdate as date,user.id as userid,user.username as username,user.userimg as img FROM posttitles post,user user WHERE ( post.id=2 and post.userid=user.id ) ORDER BY post.id desc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `postcomments` [ RunTime:0.0071s ]
+SQL: SHOW COLUMNS FROM `postcomments` [ RunTime:0.0090s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'post.userid=user.id )' at line 1
+ [ SQL语句 ] : SELECT post.id as id,post.titleid as titleid,post.fid as postfid,post.messages as messages,post.commentdate as date,user.id as userid,user.username as username,user.userimg as img FROM postcomments post,user user WHERE ( post.titleid=2and post.userid=user.id ) 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'post.userid=user.id )' at line 1
+ [ SQL语句 ] : SELECT post.id as id,post.titleid as titleid,post.fid as postfid,post.messages as messages,post.commentdate as date,user.id as userid,user.username as username,user.userimg as img FROM postcomments post,user user WHERE ( post.titleid=2and post.userid=user.id ) 
+
+[ 2016-08-08T20:34:14+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001048s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001657s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001766s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0085s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0062s ]
+SQL: SELECT post.id as id,post.title as title,post.messages as messages,post.postdate as date,user.id as userid,user.username as username,user.userimg as img FROM posttitles post,user user WHERE ( post.id=2 and post.userid=user.id ) ORDER BY post.id desc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `postcomments` [ RunTime:0.0088s ]
+SQL: SHOW COLUMNS FROM `postcomments` [ RunTime:0.0076s ]
+SQL: SELECT post.id as id,post.titleid as titleid,post.fid as postfid,post.messages as messages,post.commentdate as date,user.id as userid,user.username as username,user.userimg as img FROM postcomments post,user user WHERE ( post.titleid=2 and post.userid=user.id )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000166s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000275s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020700s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020871s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001382s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001464s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001726s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001825s ]
+
+[ 2016-08-08T20:34:23+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001340s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003611s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003787s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0078s ]
+SQL: SELECT post.id as id,post.title as title,post.messages as messages,post.postdate as date,user.id as userid,user.username as username,user.userimg as img FROM posttitles post,user user WHERE ( post.id=2 and post.userid=user.id ) ORDER BY post.id desc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `postcomments` [ RunTime:0.0067s ]
+SQL: SHOW COLUMNS FROM `postcomments` [ RunTime:0.0065s ]
+SQL: SELECT post.id as id,post.titleid as titleid,post.fid as postfid,post.messages as messages,post.commentdate as date,user.id as userid,user.username as username,user.userimg as img FROM postcomments post,user user WHERE ( post.titleid=2 and post.userid=user.id )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000158s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000259s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020547s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020711s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001940s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002039s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001860s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002046s ]
+
+[ 2016-08-08T20:37:01+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001239s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001299s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0061s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0067s ]
+SQL: SELECT post.id as id,post.title as title,post.messages as messages,post.postdate as date,user.id as userid,user.username as username,user.userimg as img FROM posttitles post,user user WHERE ( post.id=2 and post.userid=user.id ) ORDER BY post.id desc  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `postcomments` [ RunTime:0.0075s ]
+SQL: SHOW COLUMNS FROM `postcomments` [ RunTime:0.0058s ]
+SQL: SELECT post.id as id,post.titleid as titleid,post.fid as postfid,post.messages as messages,post.commentdate as date,user.id as userid,user.username as username,user.userimg as img FROM postcomments post,user user WHERE ( post.titleid=2 and post.userid=user.id )  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+
+[ 2016-08-08T20:37:09+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000833s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001161s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001260s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0056s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0063s ]
+SQL: SELECT post.id as id,post.title as title,post.messages as messages,post.postdate as date,user.id as userid,user.username as username,user.userimg as img FROM posttitles post,user user WHERE ( post.id=2 and post.userid=user.id ) ORDER BY post.id desc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `postcomments` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `postcomments` [ RunTime:0.0057s ]
+SQL: SELECT post.id as id,post.titleid as titleid,post.fid as postfid,post.messages as messages,post.commentdate as date,user.id as userid,user.username as username,user.userimg as img FROM postcomments post,user user WHERE ( post.titleid=2 and post.userid=user.id )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000219s ]
+NOTIC: [8] Undefined index: fid E:\PHP\xampp\htdocs\alpha\Runtime\Cache\Home\bec8a2ac56cf2896ca737c26ed6e4a68.php 第 54 行.
+NOTIC: [8] Undefined index: fid E:\PHP\xampp\htdocs\alpha\Runtime\Cache\Home\bec8a2ac56cf2896ca737c26ed6e4a68.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018762s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019011s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001355s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001417s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002049s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002137s ]
+
+[ 2016-08-08T20:39:00+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001685s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000886s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000953s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0062s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0071s ]
+SQL: SELECT post.id as id,post.title as title,post.messages as messages,post.postdate as date,user.id as userid,user.username as username,user.userimg as img FROM posttitles post,user user WHERE ( post.id=2 and post.userid=user.id ) ORDER BY post.id desc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `postcomments` [ RunTime:0.0066s ]
+SQL: SHOW COLUMNS FROM `postcomments` [ RunTime:0.0053s ]
+SQL: SELECT post.id as id,post.titleid as titleid,post.fid as postfid,post.messages as messages,post.commentdate as date,user.id as userid,user.username as username,user.userimg as img FROM postcomments post,user user WHERE ( post.titleid=2 and post.userid=user.id )  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000185s ]
+NOTIC: [8] Undefined index: fid E:\PHP\xampp\htdocs\alpha\Runtime\Cache\Home\bec8a2ac56cf2896ca737c26ed6e4a68.php 第 54 行.
+NOTIC: [8] Undefined index: fid E:\PHP\xampp\htdocs\alpha\Runtime\Cache\Home\bec8a2ac56cf2896ca737c26ed6e4a68.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018829s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018963s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002758s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002847s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001187s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001271s ]
+
+[ 2016-08-08T20:40:39+08:00 ] ::1 /alpha/index.php/Home/Inward/postmessages/postid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001820s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001281s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001362s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0057s ]
+SQL: SHOW COLUMNS FROM `posttitles` [ RunTime:0.0069s ]
+SQL: SELECT post.id as id,post.title as title,post.messages as messages,post.postdate as date,user.id as userid,user.username as username,user.userimg as img FROM posttitles post,user user WHERE ( post.id=2 and post.userid=user.id ) ORDER BY post.id desc  [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `postcomments` [ RunTime:0.0091s ]
+SQL: SHOW COLUMNS FROM `postcomments` [ RunTime:0.0095s ]
+SQL: SELECT post.id as id,post.titleid as titleid,post.fid as postfid,post.messages as messages,post.commentdate as date,post.good as good,user.id as userid,user.username as username,user.userimg as img FROM postcomments post,user user WHERE ( post.titleid=2 and post.userid=user.id )  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000204s ]
+NOTIC: [8] Undefined index: fid E:\PHP\xampp\htdocs\alpha\Runtime\Cache\Home\bec8a2ac56cf2896ca737c26ed6e4a68.php 第 54 行.
+NOTIC: [8] Undefined index: fid E:\PHP\xampp\htdocs\alpha\Runtime\Cache\Home\bec8a2ac56cf2896ca737c26ed6e4a68.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021590s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021685s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000921s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000978s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001783s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001894s ]
+

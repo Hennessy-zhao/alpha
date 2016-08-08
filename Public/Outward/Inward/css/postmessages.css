@@ -188,6 +188,18 @@ body{
 					cursor: pointer;
 				}
 
+				#others span.firstreply{
+					margin: 0 2% 0 0;
+					cursor: pointer;
+					color: white;
+				}
+
+				#others span.firstreply:hover{
+					text-decoration: underline;
+					cursor: pointer;
+					color: white;
+				}
+
 				#others span.reply{
 					margin: 0 2% 0 0;
 					cursor: pointer;

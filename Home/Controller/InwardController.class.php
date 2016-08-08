@@ -37,14 +37,7 @@ class InwardController extends Controller {
      	$this->display("posts");
      }
 
-     //单个帖子页面
-
-      public function postmessages(){
-        $postid=I('get.postid');
-
-        
-        $this->display("postmessages");
-      }
+     
 
 
      //发布新帖子
@@ -71,6 +64,44 @@ class InwardController extends Controller {
 
           $this->redirect("Inward/posts");
      }
+
+
+     //单个帖子页面
+
+      public function postmessages(){
+        $postid=I('get.postid');
+        
+        $m1 = M('posttitles');     
+        $list1 = $m1->table('posttitles post,user user')->where('post.id='.$postid.' and post.userid=user.id')->field('post.id as id, post.title as title, post.messages as messages,post.postdate as date,user.id as userid,user.username as username,user.userimg as img')->order('post.id desc' )->select();
+        $this->assign('select1', $list1);
+
+        $m2 = M('postcomments');     
+        $list2 = $m2->table('postcomments post,user user')->where('post.titleid='.$postid.' and post.userid=user.id')->field('post.id as id, post.titleid as titleid, post.fid as postfid,post.messages as messages,post.commentdate as date,post.good as good,user.id as userid,user.username as username,user.userimg as img')->select();
+        $this->assign('select2', $list2);
+
+        
+        $this->display("postmessages");
+      }
+
+
+      //在单个帖子中发表评论
+      public function addnewcomment(){
+        $postid=I('get.postid');
+        $userid=I('get.userid');
+        $messages=I('post.newtext');
+        $data=array(
+              'titleid'=>$postid,
+              'fid' => 0,
+              'userid'=>$userid,
+              'messages'=>$messages,
+              'commentdate'=>date('y-m-d H:i:s',time())
+          );    
+
+        $result=M('postcomments')->add($data);
+
+
+        $this->redirect("Home/Inward/postmessages/postid/".$postid);
+      }
 
 //*****文件页面********************************
      public function files(){
@@ -286,6 +317,15 @@ class Page{
 // userid varchar(64) not null,
 // messages text not null,
 // postdate datetime not null
+// )default charset=utf8;
+
+// create table postcomments(
+// id int not null primary key auto_increment,
+// titleid int not null,
+// fid int not null,
+// userid int not null,
+// messages text not null,
+// commentdate datetime not null
 // )default charset=utf8;
 
 
