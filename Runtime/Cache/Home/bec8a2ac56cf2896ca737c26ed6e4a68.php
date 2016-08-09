@@ -51,7 +51,8 @@
                 
                 
             </div>
-            <?php if(is_array($select2)): foreach($select2 as $key=>$data): if(($data["fid"] == 0)): ?><div class="col-md-12" id="firstcomment">
+
+            <?php if(is_array($select2)): foreach($select2 as $key=>$data): if($data["postfid"] == -1): ?><div class="col-md-12" id="firstcomment">
                 <div class="col-md-2" id="userimg">
                     
                         <img src="/alpha/Public/userimg/<?php echo ($data['img']); ?>" alt=""> <p class="username"><?php echo ($data['username']); ?></p>
@@ -67,18 +68,18 @@
                         <span class="lookcomment">收起回复</span>
                         <span class="reply">回复</span>
                         <div class="col-md-10 newcomment">
-                            <textarea class="form-control"></textarea>
-                            <button class="btn btn-default btn-sm">提交</button>
+                            <textarea autocomplete="off" class="form-control secondaddtext"></textarea>
+                            <button alt="<?php echo ($data['username']); ?>" title="<?php echo ($select1[0]['id']); ?>|<?php echo ($data['userid']); ?>|<?php echo ($data['id']); ?>" class="btn btn-default btn-sm secondaddbtn1">提交</button>
                         </div>
                         
                     </div>
                     <div class="col-md-11 secondcomment" id="secondcomment">
-                        <div class="col-md-12" id="onesecondcomment">
+                    <?php if(is_array($select2)): foreach($select2 as $key=>$datas): if(($data["id"]) == $datas["commentid"]): ?><div class="col-md-12" id="onesecondcomment">
                             <div class="col-md-1" id="secondimg">
-                                <img src="/alpha/Public/userimg/userimg.jpg" alt="">
+                                <img src="/alpha/Public/userimg/<?php echo ($datas['img']); ?>" alt="">
                             </div>
                             <div class="col-md-10" id="secondmessage">
-                                <p class="message"><span class="username">赵益石</span><span class="replys">回复</span><span class="username">Hennessy-zhao&nbsp;:</span>爱上对方过后就哭了自行车把你们千万儿童与欧普千万儿童与欧普自行车被你骂啥地方规划局可领取儿童</p>
+                                <p class="message"><span class="username"><?php echo ($datas['username']); ?></span><span class="replys">回复</span><span class="username"><?php echo ($datas['fname']); ?>&nbsp;:</span><?php echo ($datas['messages']); ?></p>
                             </div>
                             <div class="col-md-10" id="secondother">
                                 <span class="glyphicon glyphicon-thumbs-up"></span>
@@ -86,29 +87,11 @@
                                 <span class="time">2016-3-4</span>
                                 <span class="reply">回复</span>
                                 <div class="col-md-11 newcomment">
-                                    <textarea class="form-control"></textarea>
-                                    <button class="btn btn-default btn-sm">提交</button>
+                                    <textarea class="form-control secondaddtext"></textarea>
+                                    <button alt="<?php echo ($datas['username']); ?>" title="<?php echo ($select1[0]['id']); ?>|<?php echo ($datas['userid']); ?>|<?php echo ($data['id']); ?>" class="btn btn-default btn-sm secondaddbtn2">提交</button>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-12" id="onesecondcomment">
-                            <div class="col-md-1" id="secondimg">
-                                <img src="/alpha/Public/userimg/userimg.jpg" alt="">
-                            </div>
-                            <div class="col-md-10" id="secondmessage">
-                                <p class="message"><span class="username">赵益石</span><span class="replys">回复</span><span class="username">Hennessy-zhao&nbsp;:</span>爱上对方过后就哭了自行车把你们千万儿童与欧普千万儿童与欧普自行车被你骂啥地方规划局可领取儿童</p>
-                            </div>
-                            <div class="col-md-10" id="secondother">
-                                <span class="glyphicon glyphicon-thumbs-up"></span>
-                                <span class="good">356</span>
-                                <span class="time">2016-3-4</span>
-                                <span class="reply">回复</span>
-                                <div class="col-md-11 newcomment">
-                                    <textarea class="form-control"></textarea>
-                                    <button class="btn btn-default btn-sm">提交</button>
-                                </div>
-                            </div>
-                        </div>
+                        </div><?php endif; endforeach; endif; ?>
                     </div>
                 </div>
                 
@@ -116,8 +99,8 @@
             </div><?php endif; endforeach; endif; ?>
            <div class="col-md-10" id="newfirstcomment">
                 <h3>发表评论</h3>
-                <form action="<?php echo U('Home/Inward/addnewcomment',array('postid'=>$select1[0]['id'],'userid'=>$select1[0]['userid']));?>" name="myForm" method="post">
-                   <textarea id="newtext" name="newtext" class="form-control" required="true" rows="5" placeholder="我想说......"></textarea>
+                <form action="<?php echo U('Home/Inward/addnewcomment',array('postid'=>$select1[0]['id']));?>" name="myForm" method="post">
+                   <textarea autocomplete="off" id="newtext" name="newtext" class="form-control" required="true" rows="5" placeholder="我想说......"></textarea>
                    <h4>评论者：&nbsp;&nbsp;<?php echo ($_SESSION['user']); ?></h4>
                    <button class="btn">发表评论</button>
                </form>
@@ -169,6 +152,73 @@
             }
         })
     })
+
+
+
+    //无极限评论上传
+    $(function(){
+        $(".secondaddbtn1").on("click",function(){
+            message=$(this).siblings(".secondaddtext").val();
+            ids=$(this).attr("title");
+            id=ids.split('|');
+            titleid=id[0];
+            fid=id[1];
+            commentid=id[2];
+            fname=$(this).attr("alt");
+            $(this).siblings(".secondaddtext").val("");
+
+            $.post("<?php echo U('Home/Inward/addendlesscomment','','');?>",{
+                    titleid : titleid,
+                    fid : fid,
+                    commentid : commentid,
+                    message : message,
+                    fname : fname
+                },function(data){
+                    if (data==1) {
+                        
+
+                    }
+                    else{
+                        alert("对不起，服务器正忙或出现错误");
+                    }
+            })
+
+        })
+
+
+        $(".secondaddbtn2").on("click",function(){
+            message=$(this).siblings(".secondaddtext").val();
+            $thisone=$(this);
+            ids=$(this).attr("title");
+            id=ids.split('|');
+            titleid=id[0];
+            fid=id[1];
+            commentid=id[2];
+            fname=$(this).attr("alt");
+            time = new Date();
+
+            $(this).siblings(".secondaddtext").val("");
+
+            $.post("<?php echo U('Home/Inward/addendlesscomment','','');?>",{
+                    titleid : titleid,
+                    fid : fid,
+                    commentid : commentid,
+                    message : message,
+                    fname : fname
+                },function(data){
+                    if (data==1) {
+
+                        location.reload() 
+                        
+                    }
+                    else{
+                        alert("对不起，服务器正忙或出现错误");
+                    }
+            })
+
+        })
+    })
+    
 </script>
 </body>
 </html>

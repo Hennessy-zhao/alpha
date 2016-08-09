@@ -76,10 +76,9 @@ class InwardController extends Controller {
         $this->assign('select1', $list1);
 
         $m2 = M('postcomments');     
-        $list2 = $m2->table('postcomments post,user user')->where('post.titleid='.$postid.' and post.userid=user.id')->field('post.id as id, post.titleid as titleid, post.fid as postfid,post.messages as messages,post.commentdate as date,post.good as good,user.id as userid,user.username as username,user.userimg as img')->select();
+        $list2 = $m2->table('postcomments post,user user')->where('post.titleid='.$postid.' and post.userid=user.id')->field('post.id as id, post.titleid as titleid, post.fid as postfid,post.messages as messages,post.commentdate as date,post.good as good,post.commentid as commentid, post.fname as fname ,user.id as userid,user.username as username,user.userimg as img')->select();
         $this->assign('select2', $list2);
 
-        
         $this->display("postmessages");
       }
 
@@ -87,11 +86,11 @@ class InwardController extends Controller {
       //在单个帖子中发表评论
       public function addnewcomment(){
         $postid=I('get.postid');
-        $userid=I('get.userid');
+        $userid=$_SESSION['userid'];
         $messages=I('post.newtext');
         $data=array(
               'titleid'=>$postid,
-              'fid' => 0,
+              'fid' => -1,
               'userid'=>$userid,
               'messages'=>$messages,
               'commentdate'=>date('y-m-d H:i:s',time())
@@ -101,6 +100,36 @@ class InwardController extends Controller {
 
 
         $this->redirect("Home/Inward/postmessages/postid/".$postid);
+      }
+
+
+
+      //无极限评论提交
+
+      public function addendlesscomment(){
+          $titleid=I('post.titleid');
+          $fid=I('post.fid');
+          $commentid=I('post.commentid');
+          $message=I('post.message');
+          $fname=I('post.fname');
+
+          $data=array(
+              'titleid'=>$titleid,
+              'fid' => $fid,
+              'userid'=>$_SESSION['userid'],
+              'messages'=>$message,
+              'commentdate'=>date('y-m-d H:i:s',time()),
+              'commentid'=>$commentid,
+              'fname'=>$fname
+          );    
+
+          $result=M('postcomments')->add($data);
+          if($result){
+            echo 1;
+          }
+          else{
+            echo 0;
+          }
       }
 
 //*****文件页面********************************

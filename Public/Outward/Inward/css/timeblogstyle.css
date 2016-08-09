@@ -129,7 +129,7 @@ a:hover{
 	-o-transform:rotate(30deg);
 	}
 .talk, .address, .email, .photos, .heart{
-	background:url(../images/post/icons.png) no-repeat;
+	background:url(../images/icons.png) no-repeat;
 	}
 .talk { background-position: 13px 18px }
 .address{
@@ -202,7 +202,7 @@ a:hover{
 	overflow:hidden;
 	}
 .row_box img{
-	width:60%;
+	width:55px;
 	height: 50px;
 	padding-top:4px;
 	margin-left: 20%;
@@ -216,6 +216,7 @@ a:hover{
 .row_box p.p1{
 	margin:5px 0px 10px 10%;
 	font-size: 0.9em;
+	text-align: center;
 }
 .row_box p.p2{
 	line-height:24px;
@@ -242,7 +243,7 @@ a:hover{
 	color:#F36;
 	}	
 .likes, .comments, .icon_time{
-	background:url(../images/post/icons.png) no-repeat;
+	background:url(../images/icons.png) no-repeat;
 	}
 .likes, .comments{
 	float:right;
