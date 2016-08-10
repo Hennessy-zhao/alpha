@@ -62,8 +62,8 @@
                 	<li>
                         <a href="#" class="mws-i-24 i-list" alt="3">帖子管理</a>
                         <ul class="smallurl" id="smallurl3">
-                            <li><a href="#">全部帖子</a></li>
-                            <li><a href="#">成员发帖活跃度</a></li>
+                            <li><a href="<?php echo U('Admin/Manage/existposts','','');?>" target="target1">全部帖子</a></li>
+                            <li><a href="<?php echo U('Admin/Manage/examineposts','','');?>" target="target1">被删除帖子</a></li>
                         </ul>
                     </li>
                 	<li>

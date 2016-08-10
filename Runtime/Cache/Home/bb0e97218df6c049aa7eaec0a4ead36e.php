@@ -11,6 +11,21 @@
     <script type="text/javascript" src="/alpha/Public/Outward/Inward/js/js.js"></script>
 </head>
 <body ng-app="myapp">
+    <div class="dropdown">
+               <p class="btn dropdown-toggle" id="dropdownMenu1" 
+                  data-toggle="dropdown">
+                  <?php echo ($_SESSION['user']); ?>
+                  <span class="caret"></span>
+               </p>
+               <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                  <li role="presentation">
+                     <a role="menuitem" tabindex="-1" href="<?php echo U('Home/User/index','','');?>">个人中心</a>
+                  </li>
+                  <li role="presentation">
+                     <a id="signout" role="menuitem" tabindex="-1" href="#">退出</a>
+                  </li>
+               </ul>
+    </div>
     <div class="col-md-12" id="top">
         <div class="col-md-10" id="site_title">
             <h1>PC System Discuss Center</h1>
@@ -65,11 +80,15 @@
                                 <p class="p2"><?php echo ($data["messages"]); ?></p>
                             </ul>
                             <ul class="details col-md-12">
-                                <li class="comments"><?php echo ($data["comments"]); ?></li>
+                                <!-- <li class="comments"><?php echo ($data["comments"]); ?></li> -->
                                 <li class="icon_time"><?php echo ($data["date"]); ?></li>
                             </ul>
                         </div>
                     </li><?php endforeach; endif; ?>
+                    <li class="col-md-12">
+                        <?php echo ($page); ?>
+                    </li>
+                        
                 </ul>
             
             <!--博客列表部分结束-->
@@ -117,14 +136,34 @@
              
     </div>
 
-
-
+<script src="/alpha/Public/Common/js/jquery-2.1.4.min.js"></script>
+<script src="/alpha/Public/Common/js/bootstrap.min.js"></script>
 <script src="/alpha/Public/Common/js/angular.min.js"></script>
 <script>
   angular.module("myapp",[])
   .controller("firstController",['$scope',function($scope){
      
   }])
+</script>
+<script>
+     //退出
+    $(function(){
+            $("#signout").click(function(){
+                if (confirm("确定退出管理界面？？")) {
+                     $.post("<?php echo U('Home/Inward/signout','','');?>",{
+                          
+                      },function(data){
+                        if (data==1) {
+                            window.location.href="<?php echo U('Home/Main/index','','');?>";
+                        }
+                        else{
+                            alert("服务器正忙");
+                        }
+                    })
+                };
+                return false;
+            })
+        })
 </script>
 </body>
 </html>

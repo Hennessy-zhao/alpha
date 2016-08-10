@@ -7,12 +7,31 @@
     <link href="__PUBLIC__/Common/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
+<header>
+    
+</header>
 <body ng-app="myapp">
+    <div class="dropdown">
+               <p class="btn dropdown-toggle" id="dropdownMenu1" 
+                  data-toggle="dropdown">
+                  {$_SESSION['user']}
+                  <span class="caret"></span>
+               </p>
+               <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                  <li role="presentation">
+                     <a role="menuitem" tabindex="-1" href="{:U('Home/User/index','','')}">个人中心</a>
+                  </li>
+                  <li role="presentation">
+                     <a id="signout" role="menuitem" tabindex="-1" href="#">退出</a>
+                  </li>
+               </ul>
+    </div>
     <div class="col-md-12" id="top">
         <div class="col-md-10" id="site_title">
             <h1>PC System Discuss Center</h1>
             <br/>
             <p>计算机系统研发中心</p>
+
         </div>
         <div class="col-md-12" id="top_menu">
             <ul>
@@ -53,8 +72,6 @@
             </div>
 
             <foreach name='select2' item='data'>
-            
-            <if condition="$data.postfid eq -1">
             <div class="col-md-12" id="firstcomment">
                 <div class="col-md-2" id="userimg">
                     
@@ -65,7 +82,7 @@
                         {$data['messages']}
                     </div>
                     <div class="col-md-12" id="others">
-                        <span class="glyphicon glyphicon-thumbs-up"></span>
+                        <span class="glyphicon glyphicon-thumbs-up addgood" alt="{$data['id']}"></span>
                         <span class="good">{$data['good']}</span>
                         <span class="time">{$data['date']}</span>
                         <span class="lookcomment">收起回复</span>
@@ -77,7 +94,7 @@
                         
                     </div>
                     <div class="col-md-11 secondcomment" id="secondcomment">
-                    <foreach name='select2' item='datas'>
+                    <foreach name='select3' item='datas'>
                         <eq name="data.id" value="$datas.commentid">
                         <div class="col-md-12" id="onesecondcomment">
                             <div class="col-md-1" id="secondimg">
@@ -87,8 +104,8 @@
                                 <p class="message"><span class="username">{$datas['username']}</span><span class="replys">回复</span><span class="username">{$datas['fname']}&nbsp;:</span>{$datas['messages']}</p>
                             </div>
                             <div class="col-md-10" id="secondother">
-                                <span class="glyphicon glyphicon-thumbs-up"></span>
-                                <span class="good">356</span>
+                                <span class="glyphicon glyphicon-thumbs-up addgood" alt="{$datas['id']}"></span>
+                                <span class="good">{$datas['good']}</span>
                                 <span class="time">2016-3-4</span>
                                 <span class="reply">回复</span>
                                 <div class="col-md-11 newcomment">
@@ -99,13 +116,15 @@
                         </div>
                         </eq>
                     </foreach>
+
                     </div>
+
                 </div>
                 
                 
             </div>
-            </if>
             </foreach>
+            {$page}
            <div class="col-md-10" id="newfirstcomment">
                 <h3>发表评论</h3>
                 <form action="{:U('Home/Inward/addnewcomment',array('postid'=>$select1[0]['id']))}" name="myForm" method="post">
@@ -140,6 +159,45 @@
 </script>
 
 <script>
+    //退出
+    $(function(){
+            $("#signout").click(function(){
+                if (confirm("确定退出管理界面？？")) {
+                     $.post("{:U('Home/Inward/signout','','')}",{
+                          
+                      },function(data){
+                        if (data==1) {
+                            window.location.href="{:U('Home/Main/index','','')}";
+                        }
+                        else{
+                            alert("服务器正忙");
+                        }
+                    })
+                };
+                return false;
+            })
+        })
+
+
+    //评论点赞
+    $(function(){
+        $(".addgood").on("click",function(){
+            commentid=$(this).attr("alt");
+            good=parseInt($(this).siblings(".good").text())+1;
+            $thisgood=$(this).siblings(".good");
+             $.post("{:U('Home/Inward/goodcomment','','')}",{
+                    commentid : commentid
+                },function(data){
+                    if (data==1) {
+                        $thisgood.text(good);
+                    }
+                    else{
+                        alert("对不起，服务器正忙或出现错误");
+                    }
+            })
+        })
+    })
+    
     //回复框的出现和隐藏
     $(function(){
         $(".reply").on("click",function(){

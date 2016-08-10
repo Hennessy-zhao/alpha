@@ -7,12 +7,31 @@
     <link href="/alpha/Public/Common/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
+<header>
+    
+</header>
 <body ng-app="myapp">
+    <div class="dropdown">
+               <p class="btn dropdown-toggle" id="dropdownMenu1" 
+                  data-toggle="dropdown">
+                  <?php echo ($_SESSION['user']); ?>
+                  <span class="caret"></span>
+               </p>
+               <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                  <li role="presentation">
+                     <a role="menuitem" tabindex="-1" href="<?php echo U('Home/User/index','','');?>">个人中心</a>
+                  </li>
+                  <li role="presentation">
+                     <a id="signout" role="menuitem" tabindex="-1" href="#">退出</a>
+                  </li>
+               </ul>
+    </div>
     <div class="col-md-12" id="top">
         <div class="col-md-10" id="site_title">
             <h1>PC System Discuss Center</h1>
             <br/>
             <p>计算机系统研发中心</p>
+
         </div>
         <div class="col-md-12" id="top_menu">
             <ul>
@@ -52,7 +71,7 @@
                 
             </div>
 
-            <?php if(is_array($select2)): foreach($select2 as $key=>$data): if($data["postfid"] == -1): ?><div class="col-md-12" id="firstcomment">
+            <?php if(is_array($select2)): foreach($select2 as $key=>$data): ?><div class="col-md-12" id="firstcomment">
                 <div class="col-md-2" id="userimg">
                     
                         <img src="/alpha/Public/userimg/<?php echo ($data['img']); ?>" alt=""> <p class="username"><?php echo ($data['username']); ?></p>
@@ -62,7 +81,7 @@
                         <?php echo ($data['messages']); ?>
                     </div>
                     <div class="col-md-12" id="others">
-                        <span class="glyphicon glyphicon-thumbs-up"></span>
+                        <span class="glyphicon glyphicon-thumbs-up addgood" alt="<?php echo ($data['id']); ?>"></span>
                         <span class="good"><?php echo ($data['good']); ?></span>
                         <span class="time"><?php echo ($data['date']); ?></span>
                         <span class="lookcomment">收起回复</span>
@@ -74,7 +93,7 @@
                         
                     </div>
                     <div class="col-md-11 secondcomment" id="secondcomment">
-                    <?php if(is_array($select2)): foreach($select2 as $key=>$datas): if(($data["id"]) == $datas["commentid"]): ?><div class="col-md-12" id="onesecondcomment">
+                    <?php if(is_array($select3)): foreach($select3 as $key=>$datas): if(($data["id"]) == $datas["commentid"]): ?><div class="col-md-12" id="onesecondcomment">
                             <div class="col-md-1" id="secondimg">
                                 <img src="/alpha/Public/userimg/<?php echo ($datas['img']); ?>" alt="">
                             </div>
@@ -82,8 +101,8 @@
                                 <p class="message"><span class="username"><?php echo ($datas['username']); ?></span><span class="replys">回复</span><span class="username"><?php echo ($datas['fname']); ?>&nbsp;:</span><?php echo ($datas['messages']); ?></p>
                             </div>
                             <div class="col-md-10" id="secondother">
-                                <span class="glyphicon glyphicon-thumbs-up"></span>
-                                <span class="good">356</span>
+                                <span class="glyphicon glyphicon-thumbs-up addgood" alt="<?php echo ($datas['id']); ?>"></span>
+                                <span class="good"><?php echo ($datas['good']); ?></span>
                                 <span class="time">2016-3-4</span>
                                 <span class="reply">回复</span>
                                 <div class="col-md-11 newcomment">
@@ -92,11 +111,14 @@
                                 </div>
                             </div>
                         </div><?php endif; endforeach; endif; ?>
+
                     </div>
+
                 </div>
                 
                 
-            </div><?php endif; endforeach; endif; ?>
+            </div><?php endforeach; endif; ?>
+            <?php echo ($page); ?>
            <div class="col-md-10" id="newfirstcomment">
                 <h3>发表评论</h3>
                 <form action="<?php echo U('Home/Inward/addnewcomment',array('postid'=>$select1[0]['id']));?>" name="myForm" method="post">
@@ -131,6 +153,45 @@
 </script>
 
 <script>
+    //退出
+    $(function(){
+            $("#signout").click(function(){
+                if (confirm("确定退出管理界面？？")) {
+                     $.post("<?php echo U('Home/Inward/signout','','');?>",{
+                          
+                      },function(data){
+                        if (data==1) {
+                            window.location.href="<?php echo U('Home/Main/index','','');?>";
+                        }
+                        else{
+                            alert("服务器正忙");
+                        }
+                    })
+                };
+                return false;
+            })
+        })
+
+
+    //评论点赞
+    $(function(){
+        $(".addgood").on("click",function(){
+            commentid=$(this).attr("alt");
+            good=parseInt($(this).siblings(".good").text())+1;
+            $thisgood=$(this).siblings(".good");
+             $.post("<?php echo U('Home/Inward/goodcomment','','');?>",{
+                    commentid : commentid
+                },function(data){
+                    if (data==1) {
+                        $thisgood.text(good);
+                    }
+                    else{
+                        alert("对不起，服务器正忙或出现错误");
+                    }
+            })
+        })
+    })
+    
     //回复框的出现和隐藏
     $(function(){
         $(".reply").on("click",function(){

@@ -27,15 +27,20 @@ class InwardController extends Controller {
 
      public function posts(){
       $user = M('user');
-      $p = new Page($count,20);
+      
 
-
+      $count = $user->table('posttitles post,user user')->where('post.userid=user.id')->field('post.id as id, post.title as title, post.messages as messages,post.postdate as date,post.replycount as comments,user.username as username,user.userimg as img')->order('post.id desc' )->count();
+      $p = new Page($count,10);
+      $p->setConfig('theme',"<ul class='pagination'><li><a> %HEADER% </a></li><li>%FIRST%</li><li>%UP_PAGE%</li><li>%LINK_PAGE%</li><li>%DOWN_PAGE%</li><li>%END%</li><li><a> %NOW_PAGE%/%TOTAL_PAGE% 页</a></li></ul>");
       $list = $user->table('posttitles post,user user')->where('post.userid=user.id')->field('post.id as id, post.title as title, post.messages as messages,post.postdate as date,post.replycount as comments,user.username as username,user.userimg as img')->order('post.id desc' )->limit($p->firstRow, $p->listRows)->select();
       $this->assign('select', $list); // 赋值数据集
       $this->assign('page', $p->show()); // 赋值分页输出
-
+     
      	$this->display("posts");
      }
+
+
+
 
      
 
@@ -75,9 +80,16 @@ class InwardController extends Controller {
         $list1 = $m1->table('posttitles post,user user')->where('post.id='.$postid.' and post.userid=user.id')->field('post.id as id, post.title as title, post.messages as messages,post.postdate as date,user.id as userid,user.username as username,user.userimg as img')->order('post.id desc' )->select();
         $this->assign('select1', $list1);
 
-        $m2 = M('postcomments');     
-        $list2 = $m2->table('postcomments post,user user')->where('post.titleid='.$postid.' and post.userid=user.id')->field('post.id as id, post.titleid as titleid, post.fid as postfid,post.messages as messages,post.commentdate as date,post.good as good,post.commentid as commentid, post.fname as fname ,user.id as userid,user.username as username,user.userimg as img')->select();
+        $m2 = M('postcomments');  
+        $count = $m2->table('postcomments post,user user')->where('post.titleid='.$postid.' and post.fid=-1 and post.userid=user.id')->field('post.id as id, post.titleid as titleid, post.fid as postfid,post.messages as messages,post.commentdate as date,post.good as good,post.commentid as commentid, post.fname as fname ,user.id as userid,user.username as username,user.userimg as img')->count();
+        $p = new Page($count,10);
+        $p->setConfig('theme',"<ul class='pagination'><li><a> %HEADER% </a></li><li>%FIRST%</li><li>%UP_PAGE%</li><li>%LINK_PAGE%</li><li>%DOWN_PAGE%</li><li>%END%</li><li><a> %NOW_PAGE%/%TOTAL_PAGE% 页</a></li></ul>");
+        $list2 = $m2->table('postcomments post,user user')->where('post.titleid='.$postid.' and post.fid=-1 and post.userid=user.id')->field('post.id as id, post.titleid as titleid, post.fid as postfid,post.messages as messages,post.commentdate as date,post.good as good,post.commentid as commentid, post.fname as fname ,user.id as userid,user.username as username,user.userimg as img')->limit($p->firstRow, $p->listRows)->select();
         $this->assign('select2', $list2);
+        $this->assign('page', $p->show()); // 赋值分页输出
+
+        $list3 = $m2->table('postcomments post,user user')->where('post.titleid='.$postid.' and post.userid=user.id')->field('post.id as id, post.titleid as titleid, post.fid as postfid,post.messages as messages,post.commentdate as date,post.good as good,post.commentid as commentid, post.fname as fname ,user.id as userid,user.username as username,user.userimg as img')->select();      
+        $this->assign('select3', $list3);
 
         $this->display("postmessages");
       }
@@ -130,6 +142,26 @@ class InwardController extends Controller {
           else{
             echo 0;
           }
+      }
+
+
+      //评论点赞
+
+      public function goodcomment(){
+        $commentid=I('post.commentid');
+        $m = M('postcomments');      
+        $where['id'] = $commentid;
+        $list = $m->where($where)->select();
+        $good=intval($list[0]['good'])+1;
+
+        $User = M("postcomments"); // 实例化User对象
+        $data['good'] = $good;
+        $res=$User->where($where)->save($data); // 根据条件保存修改的数据
+        if ($res) {
+          echo 1;
+        }
+        else
+          echo 0;
       }
 
 //*****文件页面********************************
@@ -203,7 +235,7 @@ class Page{
     public $parameter; // 分页跳转时要带的参数
     public $totalRows; // 总行数
     public $totalPages; // 分页总页面数
-    public $rollPage   = 11;// 分页栏每页显示的页数
+    public $rollPage   = 5;// 分页栏每页显示的页数
     public $lastSuffix = true; // 最后一页是否显示总页数
 
     private $p       = 'p'; //分页参数名

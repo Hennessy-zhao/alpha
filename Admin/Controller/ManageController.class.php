@@ -132,6 +132,22 @@ class ManageController extends Controller {
 
 
 
+//现有帖子的一系列操作*****************************
+    public function existposts(){
+        $this->display("existposts");
+    }
+
+
+
+
+//被用户或管理员删除的帖子的一系列操作*****************************
+    public function examineposts(){
+        $this->display("examineposts");
+    }
+
+
+
+
 //现有文件的一系列操作*****************************
 
     public function existfiles(){

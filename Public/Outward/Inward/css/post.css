@@ -17,9 +17,22 @@ body{
 
 #top{
 	height: auto;
-	margin-top: 50px;
+	margin-top: 30px;
 }
+	
+	.dropdown{
+		float: right;
+		position: absolute;
+		top:0px;
+		right: 0px;
+		z-index: 999;
+	}
 
+
+	#dropdownMenu1{
+		color: white;
+		font-size: 1.2em;
+	}
 	
 	#site_title h1 {
 		margin: 0;
@@ -123,4 +136,25 @@ body{
 	color: #755e96;
 }
 
+
+
+
 /* end of footer */
+
+/*   分页  */
+
+.pagination{
+	border: 1px solid rgb(34,34,34) !important;
+}
+
+.pagination li >a{
+	border: 1px solid rgb(34,34,34) !important;
+	background-color: rgb(24,24,24) !important;
+	color: rgb(41, 126, 216) !important;
+}
+
+.pagination .current{
+	background-color: rgb(41, 126, 216) !important;
+	border: 1px solid rgb(41, 126, 216) !important;
+	color: white !important;
+}
