@@ -29,10 +29,10 @@ class InwardController extends Controller {
       $user = M('user');
       
 
-      $count = $user->table('posttitles post,user user')->where('post.userid=user.id')->field('post.id as id, post.title as title, post.messages as messages,post.postdate as date,post.replycount as comments,user.username as username,user.userimg as img')->order('post.id desc' )->count();
+      $count = $user->table('posttitles post,user user')->where('post.userid=user.id and post.ifdelete=1')->field('post.id as id, post.title as title, post.messages as messages,post.postdate as date,post.replycount as comments,user.username as username,user.userimg as img')->order('post.id desc' )->count();
       $p = new Page($count,10);
       $p->setConfig('theme',"<ul class='pagination'><li><a> %HEADER% </a></li><li>%FIRST%</li><li>%UP_PAGE%</li><li>%LINK_PAGE%</li><li>%DOWN_PAGE%</li><li>%END%</li><li><a> %NOW_PAGE%/%TOTAL_PAGE% 页</a></li></ul>");
-      $list = $user->table('posttitles post,user user')->where('post.userid=user.id')->field('post.id as id, post.title as title, post.messages as messages,post.postdate as date,post.replycount as comments,user.username as username,user.userimg as img')->order('post.id desc' )->limit($p->firstRow, $p->listRows)->select();
+      $list = $user->table('posttitles post,user user')->where('post.userid=user.id and post.ifdelete=1')->field('post.id as id, post.title as title, post.messages as messages,post.postdate as date,post.replycount as comments,user.username as username,user.userimg as img')->order('post.id desc' )->limit($p->firstRow, $p->listRows)->select();
       $this->assign('select', $list); // 赋值数据集
       $this->assign('page', $p->show()); // 赋值分页输出
      

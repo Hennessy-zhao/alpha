@@ -59,8 +59,9 @@
 							<tbody>
 								<foreach name='select' item='data'>
 								<tr class="rank{$data.id}">
-									<td>{$data.filename}</td>
-									<td>{$data.user}</td>
+									<td>{$data.title}</td>
+									<td>{$data.messages}</td>
+									<td>{$data.username}</td>
 									<td>
 										<div class="btn-group">
 										   <button type="button" class="btn btn-default btn-sm">审核管理</button>
@@ -70,12 +71,12 @@
 										      <span class="sr-only"></span>
 										   </button>
 										   <ul class="dropdown-menu" role="menu" alt="{$data.id}">
-										      <li><a href="#" class="managebtn" alt="-1">不在页面中显示</a></li>
-										      <li><a href="#" class="managebtn" alt="0">删除</a></li>
+										   	  <li><a href="{:U('Home/Inward/postmessages',array('postid'=>$data['id']))}" target="_blank" >查看该贴</a></li>
+										      <li><a href="#" class="managebtn" alt="0">删除(从数据库中删除)</a></li>
 										   </ul>
 										</div>
 									</td>
-									<td>{$data.uploadtime}</td>
+									<td>{$data.date}</td>
 								</tr>
 								</foreach>
 							</tbody>

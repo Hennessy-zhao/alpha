@@ -134,6 +134,17 @@ class ManageController extends Controller {
 
 //现有帖子的一系列操作*****************************
     public function existposts(){
+        $m = M('posttitles');      
+        $where = "ifdelete=1";
+        $count = $m->where($where)->count();
+        // 实例化分页类
+        $p = new Page($count,10);
+        //$p = getpage($count,15);
+        $list = $m->table('posttitles post,user user')->where('post.userid=user.id and post.ifdelete=1')->field('post.id as id, post.title as title, post.messages as messages,post.postdate as date,post.replycount as comments,user.username as username,user.userimg as img')->order('post.id desc' )->order('id asc')->limit($p->firstRow, $p->listRows)->select();
+        $this->assign('select', $list); // 赋值数据集
+        $this->assign('page', $p->show()); // 赋值分页输出
+        $this->assign('count', $count); // 赋值数据集
+
         $this->display("existposts");
     }
 
@@ -142,6 +153,17 @@ class ManageController extends Controller {
 
 //被用户或管理员删除的帖子的一系列操作*****************************
     public function examineposts(){
+        $m = M('posttitles');      
+        $where = "ifdelete=0";
+        $count = $m->where($where)->count();
+        // 实例化分页类
+        $p = new Page($count,10);
+        //$p = getpage($count,15);
+        $list = $m->table('posttitles post,user user')->where('post.userid=user.id and post.ifdelete=0')->field('post.id as id, post.title as title, post.messages as messages,post.postdate as date,post.replycount as comments,user.username as username,user.userimg as img')->order('post.id desc' )->order('id asc')->limit($p->firstRow, $p->listRows)->select();
+        $this->assign('select', $list); // 赋值数据集
+        $this->assign('page', $p->show()); // 赋值分页输出
+        $this->assign('count', $count); // 赋值数据集
+
         $this->display("examineposts");
     }
 

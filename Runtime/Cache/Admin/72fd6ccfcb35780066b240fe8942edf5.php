@@ -57,8 +57,9 @@
 							</thead>
 							<tbody>
 								<?php if(is_array($select)): foreach($select as $key=>$data): ?><tr class="rank<?php echo ($data["id"]); ?>">
-									<td><?php echo ($data["filename"]); ?></td>
-									<td><?php echo ($data["user"]); ?></td>
+									<td><?php echo ($data["title"]); ?></td>
+									<td><?php echo ($data["messages"]); ?></td>
+									<td><?php echo ($data["username"]); ?></td>
 									<td>
 										<div class="btn-group">
 										   <button type="button" class="btn btn-default btn-sm">审核管理</button>
@@ -68,12 +69,12 @@
 										      <span class="sr-only"></span>
 										   </button>
 										   <ul class="dropdown-menu" role="menu" alt="<?php echo ($data["id"]); ?>">
-										      <li><a href="#" class="managebtn" alt="-1">不在页面中显示</a></li>
-										      <li><a href="#" class="managebtn" alt="0">删除</a></li>
+										   	  <li><a href="<?php echo U('Home/Inward/postmessages',array('postid'=>$data['id']));?>" target="_blank" >查看该贴</a></li>
+										      <li><a href="#" class="managebtn" alt="0">删除该贴(数据库仍存)</a></li>
 										   </ul>
 										</div>
 									</td>
-									<td><?php echo ($data["uploadtime"]); ?></td>
+									<td><?php echo ($data["date"]); ?></td>
 								</tr><?php endforeach; endif; ?>
 							</tbody>
 						</table>
