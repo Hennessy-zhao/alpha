@@ -52,6 +52,7 @@
 									<th>帖子名</th>
 									<th style="width:30%">首贴内容</th>
 									<th>发帖者</th>
+									<th>删除者</th>
 									<th>操作</th>
 									<th>发帖时间</th>
 								</tr>
@@ -61,6 +62,7 @@
 									<td><?php echo ($data["title"]); ?></td>
 									<td><?php echo ($data["messages"]); ?></td>
 									<td><?php echo ($data["username"]); ?></td>
+									<td><?php echo ($data["master"]); ?></td>
 									<td>
 										<div class="btn-group">
 										   <button type="button" class="btn btn-default btn-sm">审核管理</button>
@@ -69,9 +71,9 @@
 										      <span class="caret"></span>
 										      <span class="sr-only"></span>
 										   </button>
-										   <ul class="dropdown-menu" role="menu" alt="<?php echo ($data["id"]); ?>">
+										   <ul class="dropdown-menu" role="menu" >
 										   	  <li><a href="<?php echo U('Home/Inward/postmessages',array('postid'=>$data['id']));?>" target="_blank" >查看该贴</a></li>
-										      <li><a href="#" class="managebtn" alt="0">删除(从数据库中删除)</a></li>
+										      <li><a href="#" class="managebtn" alt="<?php echo ($data["id"]); ?>">删除(从数据库中删除)</a></li>
 										   </ul>
 										</div>
 									</td>
@@ -94,7 +96,27 @@
 		})
 	</script>
 	<script>
-		
+		$(function(){
+			$(".managebtn").on("click",function(){
+				titleid=$(this).attr("alt");
+
+				if (confirm("确定将本贴从数据库中彻底删除吗？（删除后数据库中将永久失去此贴的信息）")) {
+					$.post("<?php echo U('Admin/Manage/manageposts','','');?>",{
+	                    titleid : titleid,
+	                    rank : 0
+	                	},function(data){
+	                    	if (data==1) {
+	                        	$(".rank"+titleid).css("display","none");
+	                    	}
+	                    	else{
+	                        	alert("对不起，服务器正忙或出现错误");
+	                    	}
+	            	})
+				};
+				
+
+			})
+		})
 	</script>
 	
 </body>

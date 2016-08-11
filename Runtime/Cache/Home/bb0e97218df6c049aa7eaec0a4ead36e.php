@@ -80,7 +80,7 @@
                                 <p class="p2"><?php echo ($data["messages"]); ?></p>
                             </ul>
                             <ul class="details col-md-12">
-                                <!-- <li class="comments"><?php echo ($data["comments"]); ?></li> -->
+                                <li class="comments"><?php echo ($data["comments"]); ?></li>
                                 <li class="icon_time"><?php echo ($data["date"]); ?></li>
                             </ul>
                         </div>

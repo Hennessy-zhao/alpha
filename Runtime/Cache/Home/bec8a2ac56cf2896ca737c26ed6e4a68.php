@@ -179,7 +179,7 @@
             commentid=$(this).attr("alt");
             good=parseInt($(this).siblings(".good").text())+1;
             $thisgood=$(this).siblings(".good");
-             $.post("<?php echo U('Home/Inward/goodcomment','','');?>",{
+            $.post("<?php echo U('Home/Inward/goodcomment','','');?>",{
                     commentid : commentid
                 },function(data){
                     if (data==1) {

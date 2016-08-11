@@ -149,6 +149,39 @@ class ManageController extends Controller {
     }
 
 
+    //对于帖子的删除操作
+    public function manageposts(){
+        $titleid=I('post.titleid');
+        $rank=I('post.rank');
+        if ($rank==1) {
+            $User1 = M("posttitles"); 
+            $data1['ifdelete'] = 0;
+            $data1['judger']=$_SESSION['master'];
+            $where1['id']=$titleid;
+            $save1=$User1->where($where1)->save($data1);
+            if ($save1) {
+                 echo 1;
+            }
+            else{
+                echo 0;
+            } 
+        }
+        else{
+            $User1 = M("posttitles"); 
+            $where1['id']=$titleid;
+            $res1=$User1->where($where1)->delete(); 
+            $User2 = M("postcomments"); 
+            $where2['titleid']=$titleid;
+            $res2=$User2->where($where2)->delete(); 
+            if ($res1) {
+                echo 1;
+            }
+            else
+                echo 0;
+        }
+    }
+
+
 
 
 //被用户或管理员删除的帖子的一系列操作*****************************
@@ -159,7 +192,7 @@ class ManageController extends Controller {
         // 实例化分页类
         $p = new Page($count,10);
         //$p = getpage($count,15);
-        $list = $m->table('posttitles post,user user')->where('post.userid=user.id and post.ifdelete=0')->field('post.id as id, post.title as title, post.messages as messages,post.postdate as date,post.replycount as comments,user.username as username,user.userimg as img')->order('post.id desc' )->order('id asc')->limit($p->firstRow, $p->listRows)->select();
+        $list = $m->table('posttitles post,user user')->where('post.userid=user.id and post.ifdelete=0')->field('post.id as id, post.title as title, post.messages as messages,post.postdate as date,post.replycount as comments,post.judger as master,user.username as username,user.userimg as img')->order('post.id desc' )->order('id asc')->limit($p->firstRow, $p->listRows)->select();
         $this->assign('select', $list); // 赋值数据集
         $this->assign('page', $p->show()); // 赋值分页输出
         $this->assign('count', $count); // 赋值数据集

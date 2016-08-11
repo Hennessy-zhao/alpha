@@ -32,7 +32,7 @@ class InwardController extends Controller {
       $count = $user->table('posttitles post,user user')->where('post.userid=user.id and post.ifdelete=1')->field('post.id as id, post.title as title, post.messages as messages,post.postdate as date,post.replycount as comments,user.username as username,user.userimg as img')->order('post.id desc' )->count();
       $p = new Page($count,10);
       $p->setConfig('theme',"<ul class='pagination'><li><a> %HEADER% </a></li><li>%FIRST%</li><li>%UP_PAGE%</li><li>%LINK_PAGE%</li><li>%DOWN_PAGE%</li><li>%END%</li><li><a> %NOW_PAGE%/%TOTAL_PAGE% 页</a></li></ul>");
-      $list = $user->table('posttitles post,user user')->where('post.userid=user.id and post.ifdelete=1')->field('post.id as id, post.title as title, post.messages as messages,post.postdate as date,post.replycount as comments,user.username as username,user.userimg as img')->order('post.id desc' )->limit($p->firstRow, $p->listRows)->select();
+      $list = $user->table('posttitles post,user user')->where('post.userid=user.id and post.ifdelete=1')->field('post.id as id, post.title as title, post.messages as messages,post.postdate as date,post.replycount as comments,user.username as username,user.userimg as img')->order('post.lastcommentdate desc' )->limit($p->firstRow, $p->listRows)->select();
       $this->assign('select', $list); // 赋值数据集
       $this->assign('page', $p->show()); // 赋值分页输出
      
@@ -62,7 +62,8 @@ class InwardController extends Controller {
               'filesrc' => $info["newfile"]["savename"],
               'userid'=>$userid,
               'messages'=>$postmessages,
-              'postdate'=>date('y-m-d H:i:s',time())
+              'postdate'=>date('y-m-d H:i:s',time()),
+              'lastcommentdate'=>date('y-m-d H:i:s',time())
           );    
 
           $result=M('posttitles')->add($data);
@@ -100,6 +101,7 @@ class InwardController extends Controller {
         $postid=I('get.postid');
         $userid=$_SESSION['userid'];
         $messages=I('post.newtext');
+        //发布新帖子
         $data=array(
               'titleid'=>$postid,
               'fid' => -1,
@@ -109,6 +111,17 @@ class InwardController extends Controller {
           );    
 
         $result=M('postcomments')->add($data);
+
+
+        //修改数据库posttitles（帖子题目）里面的内容
+        $User = M("posttitles");
+        $where['id']=$postid;
+        $list = $User->field(true)->where($where)->select();
+        $replycount=intval($list[0]['replycount'])+1;
+        $data1['lastcommentdate']=date('y-m-d H:i:s',time());
+        $data1['replycount']=$replycount;
+        
+        $save=$User->where($where)->save($data1);
 
 
         $this->redirect("Home/Inward/postmessages/postid/".$postid);
@@ -136,7 +149,18 @@ class InwardController extends Controller {
           );    
 
           $result=M('postcomments')->add($data);
-          if($result){
+
+          //修改数据库posttitles（帖子题目）里面的内容
+          $User = M("posttitles");
+          $where['id']=$titleid;
+          $list = $User->field(true)->where($where)->select();
+          $replycount=intval($list[0]['replycount'])+1;
+          $data1['lastcommentdate']=date('y-m-d H:i:s',time());
+          $data1['replycount']=$replycount;
+          
+          $save=$User->where($where)->save($data1);
+
+          if($result&&$save){
             echo 1;
           }
           else{

@@ -68,9 +68,9 @@
 										      <span class="caret"></span>
 										      <span class="sr-only"></span>
 										   </button>
-										   <ul class="dropdown-menu" role="menu" alt="<?php echo ($data["id"]); ?>">
+										   <ul class="dropdown-menu" role="menu">
 										   	  <li><a href="<?php echo U('Home/Inward/postmessages',array('postid'=>$data['id']));?>" target="_blank" >查看该贴</a></li>
-										      <li><a href="#" class="managebtn" alt="0">删除该贴(数据库仍存)</a></li>
+										      <li><a href="#" class="managebtn" alt="<?php echo ($data["id"]); ?>">删除该贴(数据库仍存)</a></li>
 										   </ul>
 										</div>
 									</td>
@@ -93,7 +93,27 @@
 		})
 	</script>
 	<script>
-		
+		$(function(){
+			$(".managebtn").on("click",function(){
+				titleid=$(this).attr("alt");
+
+				if (confirm("确定将本贴从前台页面移除吗？（虽然数据库中仍保存，但是不可以在前台再恢复）")) {
+					$.post("<?php echo U('Admin/Manage/manageposts','','');?>",{
+	                    titleid : titleid,
+	                    rank : 1
+	                	},function(data){
+	                    	if (data==1) {
+	                        	$(".rank"+titleid).css("display","none");
+	                    	}
+	                    	else{
+	                        	alert("对不起，服务器正忙或出现错误");
+	                    	}
+	            	})
+				};
+				
+
+			})
+		})
 	</script>
 	
 </body>

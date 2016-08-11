@@ -185,7 +185,7 @@
             commentid=$(this).attr("alt");
             good=parseInt($(this).siblings(".good").text())+1;
             $thisgood=$(this).siblings(".good");
-             $.post("{:U('Home/Inward/goodcomment','','')}",{
+            $.post("{:U('Home/Inward/goodcomment','','')}",{
                     commentid : commentid
                 },function(data){
                     if (data==1) {
@@ -242,7 +242,7 @@
                     fname : fname
                 },function(data){
                     if (data==1) {
-                        
+                        location.reload();
 
                     }
                     else{
@@ -275,7 +275,7 @@
                 },function(data){
                     if (data==1) {
 
-                        location.reload() 
+                        location.reload(); 
                         
                     }
                     else{
