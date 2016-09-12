@@ -360,3 +360,80 @@ img {
 	font-size: 0.8em;
 	color: rgba(255, 0, 0, 0.78);
 }
+
+
+
+#newnember{
+	width: 20%;
+	min-height: 300px;
+	position: fixed;
+	right: 0;
+	top:200px;
+	cursor: pointer;
+	z-index: 999;
+}
+
+#newimages{
+	width: 60%;
+	position: absolute;
+	right: 0;
+	top:0;
+}
+
+#newimages:hover{
+	width: 90% !important;
+	-webkit-transform: translate3D(-30px,30px,10px);
+    -moz-transform:    translate3D(-30px,30px,10px);
+    -ms-transform:     translate3D(-30px,30px,10px);
+    -o-transform:      translate3D(-30px,30px,10px);
+    transform:         translate3D(-30px,30px,10px);
+    
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay:    0s;
+    -ms-transition-delay:     0s;
+    -o-transition-delay:      0s;
+    transition-delay:         0s;
+    -moz-transition-duration:0.5s;
+    -webkit-transition-duration:0.5s;
+    -ms-transition-duration:0.5s;
+    -o-transition-duration:0.5s;
+    transition-duration:0.5s;
+}
+
+
+
+#newpeople .modal-header{
+	border-bottom: 1px solid rgba(0,0,0,0) !important
+}
+
+#newpeople .modal-content{
+	width: 80%;
+	height: 1500px;
+	margin: 80px 0 0 10%;
+	background-color: rgba(255,255,255,0);
+	background-image: url(../images/paper.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	border: 1px solid rgba(0,0,0,0) !important;
+}
+
+#newpeople #msg{
+	width: 65%;
+	height: auto;
+	margin:220px 0 0 10%;
+}
+
+#newpeople #msg h3{
+	font-family:幼圆;
+	font-size: 1.6em;
+	color: #333;
+	margin-bottom:30px;
+}
+
+#newpeople #msg p{
+	font-family:微软雅黑;
+	font-size: 1.1em;
+	color: #333;
+	text-indent: 2em;
+	line-height: 25px;
+}

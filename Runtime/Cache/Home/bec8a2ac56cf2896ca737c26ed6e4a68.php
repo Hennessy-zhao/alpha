@@ -236,7 +236,7 @@
                     fname : fname
                 },function(data){
                     if (data==1) {
-                        
+                        location.reload();
 
                     }
                     else{
@@ -269,7 +269,7 @@
                 },function(data){
                     if (data==1) {
 
-                        location.reload() 
+                        location.reload(); 
                         
                     }
                     else{

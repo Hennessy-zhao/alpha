@@ -9,6 +9,33 @@ class InwardController extends Controller {
      }
 
 
+
+  //*******内网建议投诉
+     public function inwardadvise(){
+        $message=I('post.message');
+        $where['id']=$_SESSION['userid'];
+        $list=M('user')->field(true)->where($where)->select();
+        $truename=$list[0]['truename'];
+
+        $data=array(
+            'truename' => $truename,
+            'message' => $message,
+            'm_type' => 1,
+            'start_time' => date('y-m-d H:i:s',time()),
+            'username' => $_SESSION['user']
+        );
+
+        $result=M('advise')->add($data);
+
+        if ($result) {
+          echo 1;
+        }
+        else
+          echo 0;
+
+     }
+
+
 //模板
 
      public function masterplate(){
@@ -247,7 +274,7 @@ class InwardController extends Controller {
 //*******成员退出页面
 
     public function signout(){
-      $_SESSION['master']=NULL;
+      $_SESSION['user']=NULL;
       echo 1;
     }
 

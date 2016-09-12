@@ -1,0 +1,82 @@
+body{
+	margin:0px;
+	padding: 10px;
+}
+
+div,i,img{
+	margin:0px;
+	padding:0px;
+}
+
+
+#userform{
+	padding: 30px 0 0 0;
+}
+
+#oneterm{
+	margin-bottom: 20px;
+}
+
+
+#termname{
+	font-family:黑体;
+	font-size: 1.3em;
+	font-weight: bold;
+	padding: 5px 0 0 0;
+	text-align: right;
+	letter-spacing: 1em;
+	color: rgba(0,0,0,0.7)
+}
+
+#termdesc{
+	position: relative;
+	padding: 0px;
+}
+
+
+		#termdesc >input.form-control{
+			width: 45% !important;
+			height: 38px;
+		}
+
+		#termdesc select{
+			height: 35px !important;
+		}
+
+		#termdesc >textarea.form-control{
+			width: 60% !important;
+		}
+
+
+
+#showEdit{
+	display: none;
+	width:50%;
+	height: 100%;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index: 9;
+}
+
+#userimg{
+	width: 13%;
+	display:block;
+	float:left;
+	border:0.25em solid white;
+}
+
+
+#image{
+	float: left;
+	margin: 70px 0 0 3%;
+}
+
+
+#alterbtn{
+	width: 20%;
+	height: 43px;
+	font-size: 1.1em;
+	margin: 30px 0 0 5%;
+}
+

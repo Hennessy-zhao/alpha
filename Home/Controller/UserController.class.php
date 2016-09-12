@@ -72,6 +72,78 @@ class UserController extends Controller {
 		}
     }
 
+
+
+
+//*******以下为用户个人中心的一些小主页********************************************
+
+
+
+//*********用户页面我的主页**************
+
+    public function home(){
+    	//发帖个数
+    	$where['userid']=$_SESSION['userid'];
+    	$postcount=M('posttitles')->field(true)->where($where)->count();
+    	$commentcount=M('postcomments')->field(true)->where($where)->count();
+    	$postnumber=intval($postcount)+intval($commentcount);
+
+    	//文件个数
+    	$where1['user']=$_SESSION['user'];
+    	$filenumber=M('files')->field(true)->where($where1)->count();
+
+
+    	//投诉/建议次数
+    	$where2['username']=$_SESSION['user'];
+    	$advisenumber=M('advise')->field(true)->where($where2)->count();
+
+    	$this->assign('postnumber',$postnumber);
+    	$this->assign('filenumber',$filenumber);
+    	$this->assign('advisenumber',$advisenumber);
+
+
+
+    	$this->display("home");
+    }
+
+//*********用户页面个人设置**************
+
+    public function userset(){
+
+        $where['userid']=$_SESSION['userid'];
+        $list=M('user')->field(true)->where($where)->select();
+
+        $this->assign('user',$list);
+
+
+    	$this->display("userset");
+    }
+
+
+//*********用户页面系统信息**************
+
+    public function message(){
+    	$this->display("message");
+    }
+
+
+//*********用户页面我的帖子**************
+
+    public function userpost(){
+    	$this->display("userpost");
+    }
+
+//*********用户页面我的文件**************
+
+    public function userfiles(){
+    	$this->display("userfiles");
+    }
+
+
+
+
+
+
      public function _empty(){
      	echo "您输入的网址有错";
      }

@@ -95,7 +95,7 @@ footer { padding: 15px; }
 	height: 15px;
 	border-radius: 50%;
 }
-.templatemo-site-header { margin: 25px 30px; }
+.templatemo-site-header { margin: 25px 5%; }
 .templatemo-site-header h1 {
 	color: white;
 	display: inline-block;
@@ -105,6 +105,7 @@ footer { padding: 15px; }
 	margin: 0 5px;	
 	text-transform: uppercase;
 	vertical-align: middle;
+	text-align: center;
 }
 .profile-photo-container { position: relative; }
 .profile-photo-overlay {
@@ -168,8 +169,12 @@ footer { padding: 15px; }
 	z-index: 100;
 }
 .mobile-menu-icon { 
-	cursor:pointer;
-	display:none; 
+	padding: 20px 5% 20px 0; 
+	color: white;
+	font-family: 微软雅黑;
+	font-size: 1.5em;
+	text-align: center;
+	letter-spacing: 1px;
 }
 .templatemo-left-nav li { font-weight: 300; }
 .templatemo-left-nav a.active,
@@ -215,7 +220,7 @@ footer { padding: 15px; }
   padding: 0;  
   overflow-x: hidden;
 }
-.templatemo-content-container {	padding: 40px 50px; }
+.templatemo-content-container {	padding: 10px; }
 .templatemo-flex-row {
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -575,7 +580,7 @@ input[type="radio"]:checked + label span {
 		margin: 15px; 
 	}
 	.templatemo-sidebar { width: 200px; } 
-	.templatemo-site-header h1 { font-size: 1.6em; }
+	.templatemo-site-header h1 { font-size: 1.5em; }
 	.square { 
 		width: 20px; 
 		height: 20px;

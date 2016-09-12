@@ -17,28 +17,28 @@
 <![endif]-->
 
 </head>
-<body>  
+<body ng-app="myapp">  
     <!-- Left column -->
-    <div class="templatemo-flex-row">
+    <div class="templatemo-flex-row" ng-controller="firstController">
       <div class="templatemo-sidebar">
         <header class="templatemo-site-header">
-          <h1>Personal center </h1>
+          <h1>Personal&nbsp;center</h1>
         </header>
         <div class="profile-photo-container">
-          <img src="__PUBLIC__/Outward/user/images/profile-photo.jpg" alt="Profile Photo" class="img-responsive">  
+          <img src="__PUBLIC__//userimg/userimg.jpg" alt="Profile Photo" class="img-responsive" style="width:100%;height:200px;">  
           <div class="profile-photo-overlay"></div>
         </div>      
         <!-- Search box -->
         <div class="mobile-menu-icon">
-            <i class="fa fa-bars"></i>
+            {$_SESSION['user']}
         </div>
         <nav class="templatemo-left-nav">          
           <ul>
-            <li><a href="#" class="active"><i class="fa fa-user fa-fw"></i>我的主页</a></li>
-            <li><a href="#"><i class="fa fa-tags fa-fw"></i>个人信息</a></li>
-            <li><a href="#"><i class="fa fa-file fa-fw"></i>我的帖子</a></li>
-            <li><a href="#"><i class="fa fa-folder fa-fw"></i>我的文件</a></li>
-            <li><a href="#"><i class="fa fa-envelope fa-fw"></i>我的邮件</a></li>
+            <li><a href="{:U('Home/User/home','','')}" target="mains" ng-class="{'active':home}" ng-click="home=true;userset=false;message=false;userpost=false;userfiles=false;"><i class="fa fa-user fa-fw"></i>我的主页</a></li>
+            <li><a href="{:U('Home/User/userset','','')}" target="mains" ng-class="{'active':userset}" ng-click="home=false;userset=true;message=false;userpost=false;userfiles=false;"><i class="fa fa-tags fa-fw"></i>个人设置</a></li>
+            <li><a href="{:U('Home/User/message','','')}" target="mains" ng-class="{'active':message}" ng-click="home=false;userset=false;message=true;userpost=false;userfiles=false;"><i class="fa fa-tags fa-fw"></i>系统信息</a></li>
+            <li><a href="{:U('Home/User/userpost','','')}" target="mains" ng-class="{'active':userpost}" ng-click="home=false;userset=false;message=false;userpost=true;userfiles=false;"><i class="fa fa-file fa-fw"></i>我的帖子</a></li>
+            <li><a href="{:U('Home/User/userfiles','','')}" target="mains" ng-class="{'active':userfiles}" ng-click="home=false;userset=false;message=false;userpost=false;userfiles=true;"><i class="fa fa-folder fa-fw"></i>我的文件</a></li>
           </ul>  
         </nav>
       </div>
@@ -61,7 +61,7 @@
           </div>
         </div>
         <div class="templatemo-content-container" style="height:1000px">
-          
+          <iframe src="{:U('Home/User/home','','')}" name="mains" width="100%" height="100%" frameborder="0"></iframe>
                   
         </div>
       </div>
@@ -69,7 +69,17 @@
     
     <!-- JS -->
     <script src="__PUBLIC__/Common/js/jquery-2.1.4.min.js"></script>      <!-- jQuery -->
-   
+    <script src="__PUBLIC__/Common/js/angular.min.js"></script>
+    <script>
+      angular.module("myapp",[])
+      .controller("firstController",['$scope',function($scope){
+         $scope.home=true;
+         $scope.userset=false;
+         $scope.message=false;
+         $scope.userpost=false;
+         $scope.userfiles=false;
 
+      }])
+    </script>
   </body>
 </html>

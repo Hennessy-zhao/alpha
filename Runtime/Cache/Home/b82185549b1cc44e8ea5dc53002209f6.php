@@ -9,7 +9,8 @@
 
 </head>
 <body>
-<a href="<?php echo U('Home/Main/index','','');?>" id="a1" style="float:right;margin-top:10px;color:white;">跳过动画</a>
+<div style="min-width: 1110px !important;">
+  <a href="<?php echo U('Home/Main/index','','');?>" id="a1" style="float:right;margin-top:10px;color:white;">跳过动画</a>
 <main>
   <div class="label" style="position:absolute;top:45%;">
     <a href="#" class=" js-trigger-reset" style="display:none;">
@@ -48,6 +49,8 @@
       </div>
   </div>
 </main>
+
+</div>
 
 <script src="/alpha/Public/Common/js/jquery-2.1.4.min.js" type="text/javascript"></script>
 <script src='/alpha/Public/Outward/welcome/js/TweenMax.min.js'></script>

@@ -1,0 +1,98 @@
+body,div,i{
+	margin:0px;
+	padding: 0px;
+}
+
+
+/*  ************标签部分  */
+#tags{
+	margin:0px;
+}
+
+	#bigtag{
+		padding: 10px;
+	}
+
+		#onetagA,#onetagB,#onetagC,#onetagD{
+			height: 135px;
+			border-radius: 4px;
+			padding: 0px;
+			margin:0px;
+		}
+		
+
+		#onetagA{
+			background-color: rgb(232, 76, 61);
+		}
+
+		#onetagB{
+			background-color: rgb(26, 188, 156);
+		}
+
+		#onetagC{
+			background-color: rgb(53, 152, 219);
+		}
+
+		#onetagD{
+			background-color: rgb(154, 89, 181);
+		}
+
+
+			#tagthings{
+				color: white !important;
+			}
+
+			#tagthings h3.tagnumber{
+				font-size: 3.5em !important;
+				font-weight: bolder !important;
+				text-align: right !important;
+			}
+
+			#tagthings p.tagdesc{
+				text-align: center;
+				margin-top: 15px;
+			}
+
+			#tagpic{
+				position: relative;
+			}
+
+			#tagpic >i.tagpics{
+				font-size: 6.3em;
+				margin:40px 0 0 0;
+				color: rgba(0, 0, 0, 0.05);
+				float: left;
+				position: absolute;
+				right: 13%;
+			}
+
+
+/*  ************天气预报部分  */
+
+#weather{
+	font:14px/1.5 微软雅黑; 
+	text-align:center;
+	margin-top:50px;
+	position: relative;
+}
+
+		#demo {  background:#72af3c; color:#FFF; padding:10px 0 30px 0; overflow:hidden; border-radius:5000px; }
+		#demo i { background: no-repeat top left; display:inline-block; height:128px; line-height:128px; margin:0 auto 20px auto; font-size:70px; padding-left:150px; font-style:normal; text-align:center; font-weight:bold; }
+		#demo i.icon-xiaoyu { background-image:url(../images/xiaoyu.png); }
+		#demo i.icon-zhongyu { background-image:url(../images/zhongyu.png); }
+		#demo i.icon-dayu { background-image:url(../images/dayu.png); }
+		#demo i.icon-qing { background-image:url(../images/qing.png); }
+		#demo i.icon-duoyun { background-image:url(../images/duoyun.png); }
+		#demo i.icon-yin { background-image:url(../images/yin.png); }
+		#demo p { background:rgba(0,0,0,.3); margin:0 20%; padding:20px; border-radius:1000px; font-size:16px; }
+		#demo p span { margin:0 15px; }
+
+
+p.moreweather{
+	position: absolute;
+	font-size: 1.2em !important;
+	right: -10%;
+	top:90%;
+	cursor: pointer;
+}
+

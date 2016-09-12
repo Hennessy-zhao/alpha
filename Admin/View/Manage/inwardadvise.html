@@ -59,7 +59,7 @@
 						<table class="mws-table" id="table1">
 							<thead>
 								<tr>
-									<th>邮箱</th>
+									<th>用户名</th>
 									<th>姓名</th>
 									<th style="width:30%">信件内容</th>
 									<th>回复内容</th>
@@ -69,9 +69,9 @@
 							</thead>
 							<tbody>
 								<foreach name='select' item='data'>
-								<tr>
-									<td>{$data.email}</td>
+								<tr class="delete{$data.id}">
 									<td>{$data.username}</td>
+									<td>{$data.truename}</td>
 									<td>{$data.message}</td>
 									<td>
 										<if condition="($data.reply eq NULL)">
@@ -81,7 +81,7 @@
 									    	<button class="btn btn-warning btn-xs">重新回复</button>
 									    </if>
 									</td>
-									<td><button class="btn btn-danger btn-xs">删除</button></td>
+									<td><button class="btn btn-danger btn-xs deltetbtn" alt="{$data.id}">删除</button></td>
 									<td>{$data.start_time}</td>
 								</tr>
 								</foreach>
@@ -101,6 +101,27 @@
 		$(function(){
 			$(".mws-table").find("tr:even").addClass("odd");
 			$(".mws-table").find("tr:odd").addClass("even");
+		})
+	</script>
+
+
+	<script>
+		$(function(){
+			$(".deltetbtn").on("click",function(){
+				adviseid=$(this).attr("alt");
+				if (confirm("确认删除此条信息？")) {
+					$.post("{:U('Admin/Manage/deleteadvise','','')}",{
+				          	adviseid : adviseid
+					      },function(data){
+					        if (data==1) {
+					        	$(".delete"+adviseid).css("display","none");
+					        }
+					        else{
+					        	alert("不能删除或系统出现问题");
+					        }
+					    })
+				};
+			})
 		})
 	</script>
 </body>

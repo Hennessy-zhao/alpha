@@ -59,7 +59,7 @@
 						<table class="mws-table" id="table1">
 							<thead>
 								<tr>
-									<th>邮箱</th>
+									<th>用户名</th>
 									<th>姓名</th>
 									<th style="width:30%">信件内容</th>
 									<th>回复内容</th>
@@ -68,9 +68,9 @@
 								</tr>
 							</thead>
 							<tbody>
-								<?php if(is_array($select)): foreach($select as $key=>$data): ?><tr>
-									<td><?php echo ($data["email"]); ?></td>
+								<?php if(is_array($select)): foreach($select as $key=>$data): ?><tr class="delete<?php echo ($data["id"]); ?>">
 									<td><?php echo ($data["username"]); ?></td>
+									<td><?php echo ($data["truename"]); ?></td>
 									<td><?php echo ($data["message"]); ?></td>
 									<td>
 										<?php if(($data["reply"] == NULL)): ?><button class="btn btn-primary btn-xs">回复</button>
@@ -78,7 +78,7 @@
 									    	<p><?php echo ($data["reply"]); ?></p>
 									    	<button class="btn btn-warning btn-xs">重新回复</button><?php endif; ?>
 									</td>
-									<td><button class="btn btn-danger btn-xs">删除</button></td>
+									<td><button class="btn btn-danger btn-xs deltetbtn" alt="<?php echo ($data["id"]); ?>">删除</button></td>
 									<td><?php echo ($data["start_time"]); ?></td>
 								</tr><?php endforeach; endif; ?>
 							</tbody>
@@ -97,6 +97,27 @@
 		$(function(){
 			$(".mws-table").find("tr:even").addClass("odd");
 			$(".mws-table").find("tr:odd").addClass("even");
+		})
+	</script>
+
+
+	<script>
+		$(function(){
+			$(".deltetbtn").on("click",function(){
+				adviseid=$(this).attr("alt");
+				if (confirm("确认删除此条信息？")) {
+					$.post("<?php echo U('Admin/Manage/deleteadvise','','');?>",{
+				          	adviseid : adviseid
+					      },function(data){
+					        if (data==1) {
+					        	$(".delete"+adviseid).css("display","none");
+					        }
+					        else{
+					        	alert("不能删除或系统出现问题");
+					        }
+					    })
+				};
+			})
 		})
 	</script>
 </body>
