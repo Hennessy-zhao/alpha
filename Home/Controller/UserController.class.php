@@ -106,17 +106,55 @@ class UserController extends Controller {
     	$this->display("home");
     }
 
+
+
 //*********用户页面个人设置**************
 
     public function userset(){
-
         $where['userid']=$_SESSION['userid'];
         $list=M('user')->field(true)->where($where)->select();
-
         $this->assign('user',$list);
 
+        $this->display("userset");
+        
+    }
 
-    	$this->display("userset");
+
+    //修改个人信息
+
+    public function updateusermsg(){
+        
+        if ($_FILES['userimg']['name']) {
+            $upload = new \Think\Upload();
+            $upload->maxSize   =     3145728 ;
+            $upload->rootPath  =     './Public/userimg/';
+            $upload->savePath  =     ''; 
+            $upload->saveName  =        array('uniqid','');   
+            $upload->uploadReplace=true; 
+            $upload->autoSub=false;
+            $info   =   $upload->upload();
+            if(!$info) {
+                echo $upload->getError();
+            }
+
+            $imgsrc=$info["userimg"]["savename"];
+        }
+        else{
+            $imgsrc="userimg.jpg";
+        }
+        
+        $where['id']=$_SESSION['userid'];
+        $data['username'] = I('post.username');
+        $data['start_year'] = I('post.startyear');
+        $data['phone']=I('post.phone');
+        $data['sex']=I('post.sex');
+        $data['introduction']=I('post.introduction');
+        $data['userimg'] = $imgsrc;
+      
+        $result=M('user')->where($where)->save($data);
+
+        $this->redirect("User/userset");
+                   
     }
 
 
