@@ -2,9 +2,47 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>user_post</title>
+	<link href="__PUBLIC__/Outward/user/css/userpost.css" rel="stylesheet"/>
+	<link href="__PUBLIC__/Common/css/bootstrap.min.css" rel="stylesheet">
+	<link href="__PUBLIC__/Common/css/font-awesome.min.css" rel="stylesheet">
 </head>
-<body>
-	userpost
+<body style="background-color: rgba(239,239,239,1);">
+	<div id="container">
+		<div id="top">
+			<p>MY POSTS</p>
+		</div>
+		<div id="content">
+			<div id="one">
+				<div id="title" class="nav">标题</div>
+				<div id="msg" class="nav">内容摘要</div>
+				<div id="look" class="nav">查看</div>
+				<div id="reply" class="nav">回复</div>
+				<div id="delete" class="nav">删除</div>
+				<div id="time" class="nav">发帖时间</div>
+			</div>
+			<foreach name="data" item="data">
+			<div id="one" class="odd">
+				<div id="title">{$data.title}</div>
+				<div id="msg">&nbsp;&nbsp;{$data.messages}&nbsp;&nbsp;</div>
+				<div id="look">
+					<a href="{:U('Home/Inward/postmessages',array('postid'=>$data['id']))}" target="_blank" class="btn btn-success btn-xs">查看</a>
+				</div>
+				<div id="reply">{$data.replycount}</div>
+				<div id="delete">
+					<a class="btn btn-danger btn-xs deletepost" alt="{$data.id}|{:U('Home/User/deleteposts','','')}">删除</a>
+				</div>
+				<div id="time">{$data.postdate}</div>
+			</div>
+			</foreach>
+		</div>
+	</div>
+
+
+
+	<script src="__PUBLIC__/Common/js/jquery-2.1.4.min.js"></script>
+	<script src="__PUBLIC__/Common/js/bootstrap.min.js"></script>
+	<script src="__PUBLIC__/Outward/user/js/userpost.js"></script>
+    
 </body>
 </html>

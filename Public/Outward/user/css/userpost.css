@@ -1,0 +1,99 @@
+body{
+	margin:0px;
+	padding: 10px;
+}
+
+div,i,img{
+	margin:0px;
+	padding:0px;
+}
+
+
+
+#container{
+	width: 88%;
+	min-height: 100px;
+	margin:30px 0 0 5%;
+	background-color: white;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0px 0px 1px 1px rgba(161, 159, 159, 0.1);
+}
+
+#top{
+	width: 100%;
+	height: auto;
+	background-color: rgb(241, 122, 84);
+	border-radius: 10px 10px 3px 3px;
+	padding: 12px 0 8px 2%;
+		
+}
+
+	#top p{
+		color: white;
+		font-family: "Open Sans",sans-serif;
+		font-size: 2.3em;
+	}
+
+
+#content{
+	width: 100%;
+}
+
+	#one{
+		width: 100%;
+		border-bottom: 1px solid rgb(221,221,221);
+		text-align: center;
+		font-size: 1.1em;
+		float: left;
+	}
+
+		.odd{
+			background-color: rgb(249,249,249);
+		}
+
+		.nav{
+			padding: 10px 0 10px 0;
+			font-size: 1.1em;
+			letter-spacing: 3px;
+		}
+
+		#title,#time{
+			width: 20%;
+			float: left;
+			padding: 8px 0 8px 0;
+		}
+
+		#msg{
+			width: 29%;
+			float: left;
+			border-left: 1px solid rgb(221,221,221);
+			border-right: 1px solid rgb(221,221,221);
+			padding: 8px 0 8px 0;
+			overflow: hidden;
+			text-overflow:ellipsis;
+			-o-text-overflow:ellipsis;
+			-webkit-text-overflow:ellipsis;
+			-moz-text-overflow:ellipsis;
+			white-space:nowrap;
+		}
+
+		#look,#reply,#delete{
+			width: 10%;
+			float: left;
+			border-right: 1px solid rgb(221,221,221);
+			padding: 8px 0 8px 0;
+			overflow: hidden;
+			text-overflow:ellipsis;
+			-o-text-overflow:ellipsis;
+			-webkit-text-overflow:ellipsis;
+			-moz-text-overflow:ellipsis;
+			white-space:nowrap;
+		}
+
+	
+
+
+
+
+

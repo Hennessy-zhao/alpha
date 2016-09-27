@@ -3,6 +3,12 @@ namespace Home\Controller;
 use Think\Controller;
 class UserController extends Controller {
     public function index(){
+
+        $where['id']=$_SESSION['userid'];
+        $list=M('user')->field(true)->where($where)->select();
+        $img=$list[0]['userimg'];
+        $this->assign('userimg',$img);
+
      	$this->display("user");
      }
 
@@ -168,13 +174,62 @@ class UserController extends Controller {
 //*********用户页面我的帖子**************
 
     public function userpost(){
+        $where['userid']=$_SESSION['userid'];
+        $where['ifdelete']=1;
+        $list=M('posttitles')->field(true)->where($where)->select();
+        $this->assign("data",$list);
+
     	$this->display("userpost");
+    }
+
+
+
+    //用户页面删除一个帖子
+
+    public function deleteposts(){
+        $postid=I('post.postid');
+        $where['id']=$postid;
+        $data['ifdelete']=0;
+        $res=M('posttitles')->where($where)->save($data);
+
+        if ($res) {
+            echo 1;
+        }
+        else{
+            echo 0;
+        }
     }
 
 //*********用户页面我的文件**************
 
     public function userfiles(){
+        $where['user']=$_SESSION['user'];
+        $where['ifshow']=1;
+        $where['ifdelete']=1;
+        $data=M('files')->field(true)->where($where)->select();
+        $this->assign("data",$data);
+
     	$this->display("userfiles");
+    }
+
+
+
+    //用户页面删除一个文件
+
+    public function deletefiles(){
+
+        $fileid=I('post.fileid');
+
+        $where['id']=$fileid;
+        $data['ifdelete']=0;
+        $res=M('files')->where($where)->save($data);
+
+        if ($res) {
+            echo 1;
+        }
+        else{
+            echo 0;
+        }
     }
 
 

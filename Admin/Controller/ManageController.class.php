@@ -207,7 +207,8 @@ class ManageController extends Controller {
 
     public function existfiles(){
         $m = M('files');      
-        $where = "ifshow!=0";
+        $where['ifshow'] = 1;
+        $where['ifdelete']=1;
         $count = $m->where($where)->count();
         // 实例化分页类
         $p = new Page($count,10);
@@ -271,6 +272,59 @@ class ManageController extends Controller {
                         }
             }
         }
+
+
+//用户删除的帖子的一系列操作*************************
+    public function deletefiles(){
+        $where['ifdelete']=0;
+        $count=M('files')->where($where)->count();
+
+        $p=new Page($count,10);
+        $list=M('files')->where($where)->order('id asc')->limit($p->firstRow,$p->listRows)->select();
+        $this->assign("data",$list);
+        $this->assign("page",$p->show());
+
+
+        $this->assign("count",$count);
+        $this->display("deletefiles");
+    }
+
+
+    //恢复文件
+    public function recoverfiles(){
+        $fileid=I('post.fileid');
+
+        $where['id']=$fileid;
+        $data['ifdelete']=1;
+        $res=M('files')->where($where)->save($data);
+
+        if ($res) {
+            echo 1;
+        }
+        else{
+            echo 0;
+        }
+    }
+
+
+    //彻底删除文件
+    public function throughdeletefiles(){
+        $fileid=I('post.fileid');
+
+        $where['id']=$fileid;
+        $list=M('files')->where($where)->select();
+
+        unlink("./Public/files/".$list[0]['filesrc']);
+        $res=M('files')->where($where)->delete();
+
+        if ($res) {
+            echo 1;
+        }
+        else{
+            echo 0;
+        }
+
+    }
 
 
 //未审核文件的一系列操作*****************************

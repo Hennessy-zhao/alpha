@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">  
-<title>Visual Admin Dashboard - Home</title>
+<title>User</title>
 <link href="/alpha/Public/Outward/user/css/font-awesome.min.css" rel="stylesheet">
 <link href="/alpha/Public/Common/css/bootstrap.min.css" rel="stylesheet">
 <link href="/alpha/Public/Outward/user/css/templatemo-style.css" rel="stylesheet">
@@ -25,7 +25,7 @@
           <h1>Personal&nbsp;center</h1>
         </header>
         <div class="profile-photo-container">
-          <img src="/alpha/Public//userimg/userimg.jpg" alt="Profile Photo" class="img-responsive" style="width:100%;height:200px;">  
+          <img src="/alpha/Public/userimg/<?php echo ($userimg); ?>" alt="Profile Photo" class="img-responsive" style="width:100%;height:200px;">  
           <div class="profile-photo-overlay"></div>
         </div>      
         <!-- Search box -->
