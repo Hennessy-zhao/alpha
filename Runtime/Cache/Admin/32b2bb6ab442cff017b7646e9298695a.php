@@ -48,8 +48,8 @@
                 	<li>
                         <a href="#" class="mws-i-24 i-group" alt="1">成员管理</a>
                         <ul class="smallurl" id="smallurl1">
-                            <li><a href="<?php echo U('Admin/Manage/existmemer','','');?>" target="target1">现有成员</a></li>
-                            <li><a href="<?php echo U('Admin/Manage/examinememer','','');?>" target="target1">未审核成员</a></li>
+                            <li><a href="<?php echo U('Admin/User/user','','');?>" target="target1">现有成员</a></li>
+                            <li><a href="<?php echo U('Admin/User/examine','','');?>" target="target1">未审核成员</a></li>
                         </ul>
                     </li>
                 	<li>
